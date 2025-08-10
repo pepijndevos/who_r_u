@@ -1,0 +1,614 @@
+comments{
+}
+info{
+rowcount:27
+colcount:27
+camerapos:Translation: X=3900.000 Y=4800.000 Z=0.000 Rotation: P=44.999943 Y=-89.999969 R=0.000002 Scale X=1.000 Y=1.000 Z=1.000
+biome:rock
+creator:pepijn
+spiderrate:10
+spidermin:2
+spidermax:4
+version:2023-08-14-1
+opencaves:15,13/
+}
+tiles{
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,50,1,50,38,34,38,38,38,38,
+38,38,38,11,24,24,1,1,1,24,24,24,1,1,1,24,24,24,1,1,1,24,24,34,38,38,38,
+38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
+38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,38,38,38,
+38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,38,24,38,38,1,38,38,11,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
+38,38,38,11,24,24,1,1,1,24,24,24,1,1,1,24,24,11,1,1,1,24,24,11,38,38,38,
+38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
+38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,38,38,38,
+38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
+38,38,38,11,24,24,1,1,1,11,24,24,1,1,1,24,24,24,1,1,1,24,24,11,38,38,38,
+38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,11,38,38,1,38,38,24,38,38,38,38,
+38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,38,38,38,
+38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,38,14,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
+38,38,38,11,14,24,1,1,1,24,24,24,1,1,1,24,24,24,1,1,1,24,24,11,38,38,38,
+38,38,38,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+}
+height{
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+}
+resources{
+crystals:
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+ore:
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+}
+objectives{
+}
+buildings{
+BuildingToolStore_C,Translation: X=1350.000 Y=6750.000 Z=0.000 Rotation: P=0.000000 Y=0.000000 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000
+}
+landslidefrequency{
+}
+lavaspread{
+}
+miners{
+ID=0/OFFICER,Translation: X=1649.676 Y=6744.509 Z=104.747 Rotation: P=-0.003600 Y=-161.011475 R=0.271885 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
+}
+briefing{
+
+
+}
+briefingsuccess{
+
+
+}
+briefingfailure{
+
+
+}
+vehicles{
+VehicleSmallTransportTruck_C,Translation: X=1645.803 Y=6744.201 Z=1.492 Rotation: P=0.000055 Y=-161.011459 R=0.000030 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0
+}
+creatures{
+}
+blocks{
+}
+script{
+
+# tiles are stored as a bit array NESW
+intarray gameboard
+int tile
+int tileID=6
+int tileIDfinal=6
+
+bool N
+bool E
+bool S
+bool W
+bool placePolarity=false
+
+int tileIdx
+int tileRow
+int tileCol
+
+int xoffset=3
+int yoffset=3
+int placeX
+int placeY
+
+# player tile (the one you play with)
+int freeCard=0
+
+# unpack tile - extract 4 bits representing lava pieces (bit layout: WESN)
+tileSides::;
+tile=gameboard[tileIdx];
+# Extract North bit (bit 0: tile & 1)
+tempMask=tile;
+tempResult=tempMask;
+tempResult/=2;
+tempResult*=2;
+tempMask-=tempResult;
+N=false;
+((tempMask==1))N=true;
+# Extract East bit (bit 1: (tile & 2) >> 1)
+tempMask=tile;
+tempResult=tempMask;
+tempResult/=4;
+tempResult*=4;
+tempMask-=tempResult;
+tempMask/=2;
+E=false;
+((tempMask==1))E=true;
+# Extract South bit (bit 2: (tile & 4) >> 2)
+tempMask=tile;
+tempResult=tempMask;
+tempResult/=8;
+tempResult*=8;
+tempMask-=tempResult;
+tempMask/=4;
+S=false;
+((tempMask==1))S=true;
+# Extract West bit (bit 3: (tile & 8) >> 3)
+tempMask=tile;
+tempMask/=8;
+W=false;
+((tempMask==1))W=true;
+
+# 7x7 crazy maze initialization system (adapted from A_Crazy_Maze.dat)
+
+# piece distribution arrays
+intarray freeParts
+int freePartsSize=34
+
+# build system variables  
+int buildCounter=0
+int dontBuild=0
+
+# random selection
+int rng=0
+int rngMax=0
+int CardToPlace=0
+
+
+# bit manipulation helpers (moved here for reuse)
+int tempMask
+int tempResult
+
+# initialize complete 7x7 board
+init::;
+fillFreePartsArray;
+buildGame;
+
+# fill piece pool with correct distribution
+fillFreePartsArray::;
+# 16 L-pieces (4 of each orientation)
+freeParts[0]=3;
+freeParts[1]=3;
+freeParts[2]=3;
+freeParts[3]=3;
+freeParts[4]=6;
+freeParts[5]=6;
+freeParts[6]=6;
+freeParts[7]=6;
+freeParts[8]=9;
+freeParts[9]=9;
+freeParts[10]=9;
+freeParts[11]=9;
+freeParts[12]=12;
+freeParts[13]=12;
+freeParts[14]=12;
+freeParts[15]=12;
+# 12 I-pieces (6 of each orientation)
+freeParts[16]=5;
+freeParts[17]=5;
+freeParts[18]=5;
+freeParts[19]=5;
+freeParts[20]=5;
+freeParts[21]=5;
+freeParts[22]=10;
+freeParts[23]=10;
+freeParts[24]=10;
+freeParts[25]=10;
+freeParts[26]=10;
+freeParts[27]=10;
+# 6 T-pieces (1-2 of each orientation)
+freeParts[28]=7;
+freeParts[29]=11;
+freeParts[30]=11;
+freeParts[31]=13;
+freeParts[32]=14;
+freeParts[33]=14;
+
+# build 7x7 game board (49 positions, but skip corners and some edges)
+buildGame::;
+dontBuild=0;
+# skip positions like A_Crazy_Maze (corners and some edges)
+((buildCounter==0))dontBuild=1;
+((buildCounter==2))dontBuild=1;
+((buildCounter==4))dontBuild=1;
+((buildCounter==6))dontBuild=1;
+((buildCounter==14))dontBuild=1;
+((buildCounter==16))dontBuild=1;
+((buildCounter==18))dontBuild=1;
+((buildCounter==20))dontBuild=1;
+((buildCounter==28))dontBuild=1;
+((buildCounter==30))dontBuild=1;
+((buildCounter==32))dontBuild=1;
+((buildCounter==34))dontBuild=1;
+((buildCounter==42))dontBuild=1;
+((buildCounter==44))dontBuild=1;
+((buildCounter==46))dontBuild=1;
+((buildCounter==48))dontBuild=1;
+((dontBuild==0))[placeCard][nextCard];
+
+nextCard::;
+gameboard[buildCounter]=0;
+buildCounter+=1;
+((buildCounter<49))[buildGame][gameComplete];
+
+placeCard::;
+rngMax=freePartsSize-1;
+rng=random(0)(rngMax);
+CardToPlace=freeParts[rng];
+gameboard[buildCounter]=CardToPlace;
+buildCounter+=1;
+freePartsSize-=1;
+freeParts[rng]=freeParts[freePartsSize];
+((buildCounter<49))[buildGame][gameComplete];
+
+# convert row,col to linear index for 7x7 grid
+calcTileIdx::;
+tileIdx=tileRow;
+tileIdx*=7;
+tileIdx+=tileCol;
+
+gameComplete::;
+freeCard=freeParts[0];
+msg:"7x7 Labyrinth initialized with 34 puzzle pieces!";
+tileRow=0;
+printBoard;
+emergeMonsters;
+
+
+emergeMonsters::;
+emerge:3,22,A,CreatureRockMonster_C,0;
+emerge:4,23,A,CreatureRockMonster_C,0;
+
+printBoard::;
+printOddRow;
+tileRow+=1;
+printFullRow;
+tileRow+=1;
+printOddRow;
+tileRow+=1;
+printFullRow;
+tileRow+=1;
+printOddRow;
+tileRow+=1;
+printFullRow;
+tileRow+=1;
+printOddRow;
+
+printFullRow::;
+tileCol=0;
+printCard;
+tileCol+=1;
+printCard;
+tileCol+=1;
+printCard;
+tileCol+=1;
+printCard;
+tileCol+=1;
+printCard;
+tileCol+=1;
+printCard;
+tileCol+=1;
+printCard;
+
+
+printOddRow::;
+tileCol=1;
+printCard;
+tileCol+=2;
+printCard;
+tileCol+=2;
+printCard;
+tileCol+=2;
+
+printFullCol::;
+tileRow=0;
+printCard;
+tileRow+=1;
+printCard;
+tileRow+=1;
+printCard;
+tileRow+=1;
+printCard;
+tileRow+=1;
+printCard;
+tileRow+=1;
+printCard;
+tileRow+=1;
+printCard;
+
+printCard::;
+calcTileIdx;
+tileSides;
+placeY=tileRow*3;
+placeX=tileCol*3;
+placeY+=yoffset;
+placeX+=xoffset;
+placeX+=1;
+((get(placeY)(placeX)==tileIDfinal))N=placePolarity==false;
+((N==placePolarity))place:placeY,placeX,tileID;
+placeY+=1;
+placeX+=1;
+((get(placeY)(placeX)==tileIDfinal))E=placePolarity==false;
+((E==placePolarity))place:placeY,placeX,tileID;
+placeX-=1;
+placeY+=1;
+((get(placeY)(placeX)==tileIDfinal))S=placePolarity==false;
+((S==placePolarity))place:placeY,placeX,tileID;
+placeX-=1;
+placeY-=1;
+((get(placeY)(placeX)==tileIDfinal))W=placePolarity==false;
+((W==placePolarity))place:placeY,placeX,tileID;
+
+timer turns=30,30,30,doturn
+
+vehicle player=0
+int playerCol
+int playerRow
+int arrowCol
+int arrowRow
+int validBits=0
+bool didrow=true
+arrow cardarrow
+
+doturn::;
+msg:"Careful, lava is coming!";
+playerCol=player.col-xoffset;
+playerRow=player.row-yoffset;
+playerCol/=3;
+playerRow/=3;
+validBits=0;
+((playerCol==1))validBits+=1;
+((playerCol==3))validBits+=1;
+((playerCol==5))validBits+=1;
+((playerRow==1))validBits+=2;
+((playerRow==3))validBits+=2;
+((playerRow==5))validBits+=2;
+((validBits==0))playerCol=1;
+((validBits==0))playerRow=5;
+((validBits==1))docol;
+((validBits==1))return;
+((validBits==2))dorow;
+((validBits==2))return;
+((didrow))[docol][dorow];
+emergeMonsters;
+
+int temptile
+float erosionDelay=1.0
+
+docol::;
+didrow=false;
+arrowCol=playerCol*3;
+arrowCol+=4;
+highlightarrow:24,arrowCol,cardarrow;
+shiftcol;
+placePolarity=false;
+tileID=10;
+tileIDfinal=6;
+printFullCol;
+wait:erosionDelay;
+tileID=9;
+printFullCol;
+wait:erosionDelay;
+tileID=8;
+printFullCol;
+wait:erosionDelay;
+tileID=7;
+printFullCol;
+wait:erosionDelay;
+tileID=6;
+printFullCol;
+wait:erosionDelay;
+placePolarity=true;
+tileIDfinal=1;
+tileID=7;
+printFullCol;
+wait:erosionDelay;
+tileID=8;
+printFullCol;
+wait:erosionDelay;
+tileID=9;
+printFullCol;
+wait:erosionDelay;
+tileID=10;
+printFullCol;
+wait:erosionDelay;
+tileID=1;
+printFullCol;
+
+
+shiftcol::;
+tileCol=playerCol;
+tileRow=6;
+calcTileIdx;
+temptile=gameboard[tileIdx];
+gameboard[tileIdx]=freeCard;
+tileRow=5;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileRow=4;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileRow=3;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileRow=2;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileRow=1;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileRow=0;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+
+dorow::;
+didrow=true;
+arrowRow=playerRow*3;
+arrowRow+=4;
+highlightarrow:arrowRow,2,cardarrow;
+shiftrow;
+placePolarity=false;
+tileID=10;
+tileIDfinal=6;
+printFullRow;
+wait:erosionDelay;
+tileID=9;
+printFullRow;
+wait:erosionDelay;
+tileID=8;
+printFullRow;
+wait:erosionDelay;
+tileID=7;
+printFullRow;
+wait:erosionDelay;
+tileID=6;
+printFullRow;
+wait:erosionDelay;
+placePolarity=true;
+tileIDfinal=1;
+tileID=7;
+printFullRow;
+wait:erosionDelay;
+tileID=8;
+printFullRow;
+wait:erosionDelay;
+tileID=9;
+printFullRow;
+wait:erosionDelay;
+tileID=10;
+printFullRow;
+wait:erosionDelay;
+tileID=1;
+printFullRow;
+
+shiftrow::;
+tileRow=playerRow;
+tileCol=0;
+calcTileIdx;
+temptile=gameboard[tileIdx];
+gameboard[tileIdx]=freeCard;
+tileCol=1;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileCol=2;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileCol=3;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileCol=4;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileCol=5;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+temptile=freeCard;
+tileCol=6;
+calcTileIdx;
+freeCard=gameboard[tileIdx];
+gameboard[tileIdx]=temptile;
+
+
+}
