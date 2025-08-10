@@ -36,9 +36,9 @@ tiles{
 38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
 38,38,38,38,14,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
 38,38,38,11,14,24,1,1,1,24,24,24,1,1,1,24,24,24,1,1,1,24,24,11,38,38,38,
-38,38,38,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,38,38,38,
-38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
-38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,1,11,11,38,50,1,50,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,38,38,38,
+38,1,1,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 }
 height{
@@ -94,7 +94,7 @@ crystals:
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -139,7 +139,8 @@ landslidefrequency{
 lavaspread{
 }
 miners{
-ID=0/OFFICER,Translation: X=1649.676 Y=6744.509 Z=104.747 Rotation: P=-0.003600 Y=-161.011475 R=0.271885 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
+ID=1,Translation: X=1628.353 Y=6820.499 Z=128.737 Rotation: P=-0.000109 Y=21.193233 R=-0.000213 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobExplosivesExpert/JobSailor/JobGeologist/JobDriver/JobEngineer/JobPilot/Level/Level/Level/Level/
+ID=0/OFFICER,Translation: X=1649.635 Y=6744.756 Z=104.745 Rotation: P=0.009924 Y=-160.996460 R=0.102727 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
 }
 briefing{
 
@@ -154,7 +155,8 @@ briefingfailure{
 
 }
 vehicles{
-VehicleSmallTransportTruck_C,Translation: X=1645.803 Y=6744.201 Z=1.492 Rotation: P=0.000055 Y=-161.011459 R=0.000030 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0
+VehicleSMLC_C,Translation: X=1542.594 Y=6787.247 Z=0.387 Rotation: P=-0.000061 Y=21.193165 R=-0.000092 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1
+VehicleSmallTransportTruck_C,Translation: X=1645.816 Y=6744.239 Z=1.491 Rotation: P=0.000000 Y=-161.009918 R=-0.000183 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0
 }
 creatures{
 }
@@ -188,7 +190,6 @@ int freeCard=0
 
 # unpack tile - extract 4 bits representing lava pieces (bit layout: WESN)
 tileSides::;
-tile=gameboard[tileIdx];
 # Extract North bit (bit 0: tile & 1)
 tempMask=tile;
 tempResult=tempMask;
@@ -334,6 +335,7 @@ freeCard=freeParts[0];
 msg:"7x7 Labyrinth initialized with 34 puzzle pieces!";
 tileRow=0;
 printBoard;
+printFreeCard;
 emergeMonsters;
 
 
@@ -400,6 +402,7 @@ printCard;
 
 printCard::;
 calcTileIdx;
+tile=gameboard[tileIdx];
 tileSides;
 placeY=tileRow*3;
 placeX=tileCol*3;
@@ -421,85 +424,122 @@ placeY-=1;
 ((get(placeY)(placeX)==tileIDfinal))W=placePolarity==false;
 ((W==placePolarity))place:placeY,placeX,tileID;
 
-timer turns=30,30,30,doturn
+printFreeCard::;
+tile=freeCard;
+tileSides;
+((N==placePolarity))place:23,2,tileID;
+((E==placePolarity))place:24,3,tileID;
+((S==placePolarity))place:25,2,tileID;
+((W==placePolarity))place:24,1,tileID;
 
-vehicle player=0
-int playerCol
-int playerRow
-int arrowCol
-int arrowRow
-int validBits=0
-bool didrow=true
 arrow cardarrow
+bool oncol=false
+
+when(laserhit:6,3)[dorow1turn]
+when(laserhit:8,3)[dorow1turn]
+dorow1turn::;
+tileRow=1;
+oncol=false;
+highlightarrow:7,2,cardarrow;
+doturn;
+
+when(laserhit:12,3)[dorow3turn]
+when(laserhit:14,3)[dorow3turn]
+dorow3turn::;
+tileRow=3;
+oncol=false;
+highlightarrow:13,2,cardarrow;
+doturn;
+
+when(laserhit:18,3)[dorow5turn]
+when(laserhit:20,3)[dorow5turn]
+dorow5turn::;
+tileRow=5;
+oncol=false;
+highlightarrow:19,2,cardarrow;
+doturn;
+
+when(laserhit:23,6)[docol1turn]
+when(laserhit:23,8)[docol1turn]
+docol1turn::;
+tileCol=1;
+oncol=true;
+highlightarrow:24,7,cardarrow;
+doturn;
+
+when(laserhit:23,12)[docol3turn]
+when(laserhit:23,14)[docol3turn]
+docol3turn::;
+tileCol=3;
+oncol=true;
+highlightarrow:24,13,cardarrow;
+doturn;
+
+when(laserhit:23,18)[docol5turn]
+when(laserhit:23,20)[docol5turn]
+docol5turn::;
+tileCol=5;
+oncol=true;
+highlightarrow:24,19,cardarrow;
+doturn;
 
 doturn::;
-msg:"Careful, lava is coming!";
-playerCol=player.col-xoffset;
-playerRow=player.row-yoffset;
-playerCol/=3;
-playerRow/=3;
-validBits=0;
-((playerCol==1))validBits+=1;
-((playerCol==3))validBits+=1;
-((playerCol==5))validBits+=1;
-((playerRow==1))validBits+=2;
-((playerRow==3))validBits+=2;
-((playerRow==5))validBits+=2;
-((validBits==0))playerCol=1;
-((validBits==0))playerRow=5;
-((validBits==1))docol;
-((validBits==1))return;
-((validBits==2))dorow;
-((validBits==2))return;
-((didrow))[docol][dorow];
+shake:1;
+wait:5;
+((oncol==true))[docol][dorow];
 emergeMonsters;
 
 int temptile
-float erosionDelay=1.0
+float erosionDelay=0.5
 
 docol::;
-didrow=false;
-arrowCol=playerCol*3;
-arrowCol+=4;
-highlightarrow:24,arrowCol,cardarrow;
 shiftcol;
 placePolarity=false;
 tileID=10;
 tileIDfinal=6;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=9;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=8;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=7;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=6;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 placePolarity=true;
 tileIDfinal=1;
 tileID=7;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=8;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=9;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=10;
 printFullCol;
+printFreeCard;
 wait:erosionDelay;
 tileID=1;
 printFullCol;
+printFreeCard;
 
 
 shiftcol::;
-tileCol=playerCol;
 tileRow=6;
 calcTileIdx;
 temptile=gameboard[tileIdx];
@@ -535,47 +575,52 @@ freeCard=gameboard[tileIdx];
 gameboard[tileIdx]=temptile;
 
 dorow::;
-didrow=true;
-arrowRow=playerRow*3;
-arrowRow+=4;
-highlightarrow:arrowRow,2,cardarrow;
 shiftrow;
 placePolarity=false;
 tileID=10;
 tileIDfinal=6;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=9;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=8;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=7;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=6;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 placePolarity=true;
 tileIDfinal=1;
 tileID=7;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=8;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=9;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=10;
 printFullRow;
+printFreeCard;
 wait:erosionDelay;
 tileID=1;
 printFullRow;
+printFreeCard;
 
 shiftrow::;
-tileRow=playerRow;
 tileCol=0;
 calcTileIdx;
 temptile=gameboard[tileIdx];
