@@ -11,6 +11,7 @@ spidermin:2
 spidermax:4
 version:2023-08-14-1
 opencaves:15,13/
+levelname:Labyrinth
 }
 tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
@@ -130,24 +131,23 @@ ore:
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 }
 objectives{
+resources: 10,0,0
 }
 buildings{
-BuildingToolStore_C,Translation: X=1350.000 Y=6750.000 Z=0.000 Rotation: P=0.000000 Y=0.000000 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000
+BuildingToolStore_C,Translation: X=1350.000 Y=6750.000 Z=0.000 Rotation: P=0.000000 Y=0.000000 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Essential=true
 }
 landslidefrequency{
 }
 lavaspread{
 }
 miners{
-ID=1,Translation: X=1628.353 Y=6820.499 Z=128.737 Rotation: P=-0.000109 Y=21.193233 R=-0.000213 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobExplosivesExpert/JobSailor/JobGeologist/JobDriver/JobEngineer/JobPilot/Level/Level/Level/Level/
-ID=0/OFFICER,Translation: X=1649.635 Y=6744.756 Z=104.745 Rotation: P=0.009924 Y=-160.996460 R=0.102727 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
+ID=0/OFFICER,Translation: X=1605.766 Y=6786.297 Z=104.745 Rotation: P=0.008545 Y=-11.569593 R=0.012096 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
+ID=1,Translation: X=1671.409 Y=6714.937 Z=129.037 Rotation: P=0.000014 Y=-33.943352 R=-0.000020 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobExplosivesExpert/JobSailor/JobGeologist/JobDriver/JobEngineer/JobPilot/Level/Level/Level/Level/
 }
 briefing{
-
-
+Cadet, we're not even sure what we're dealing with. Our scanners indicate it's a cave with lava, but we're not getting consistent readings, as if the lava moves around in impossible patterns. Anyway, if you could collect 10 energy crystals that would be great. Good luck, Cadet.
 }
 briefingsuccess{
-
 
 }
 briefingfailure{
@@ -155,8 +155,8 @@ briefingfailure{
 
 }
 vehicles{
-VehicleSMLC_C,Translation: X=1542.594 Y=6787.247 Z=0.387 Rotation: P=-0.000061 Y=21.193165 R=-0.000092 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1
-VehicleSmallTransportTruck_C,Translation: X=1645.816 Y=6744.239 Z=1.491 Rotation: P=0.000000 Y=-161.009918 R=-0.000183 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0
+VehicleSMLC_C,Translation: X=1595.104 Y=6766.296 Z=0.387 Rotation: P=0.000000 Y=-33.943371 R=0.000003 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1,Essential=true
+VehicleSmallTransportTruck_C,Translation: X=1609.338 Y=6784.909 Z=1.491 Rotation: P=-0.000061 Y=-11.581835 R=-0.000702 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0,Essential=true
 }
 creatures{
 }
@@ -332,7 +332,7 @@ tileIdx+=tileCol;
 
 gameComplete::;
 freeCard=freeParts[0];
-msg:"7x7 Labyrinth initialized with 34 puzzle pieces!";
+msg:"What are these weird crystal gates? Maybe try shooting it with a laser.";
 tileRow=0;
 printBoard;
 printFreeCard;
@@ -497,7 +497,7 @@ highlightarrow:24,19,cardarrow;
 doturn;
 
 when(laserhit:3,6)[docol1turnR]
-when(laserhit:3,12)[docol1turnR]
+when(laserhit:3,8)[docol1turnR]
 docol1turnR::;
 tileCol=1;
 tileRow=0;
@@ -507,7 +507,7 @@ highlightarrow:2,7,cardarrow;
 doturn;
 
 when(laserhit:3,12)[docol3turnR]
-when(laserhit:3,18)[docol3turnR]
+when(laserhit:3,14)[docol3turnR]
 docol3turnR::;
 tileCol=3;
 tileRow=0;
@@ -517,7 +517,7 @@ highlightarrow:2,13,cardarrow;
 doturn;
 
 when(laserhit:3,18)[docol5turnR]
-when(laserhit:3,24)[docol5turnR]
+when(laserhit:3,20)[docol5turnR]
 docol5turnR::;
 tileCol=5;
 tileRow=0;
@@ -527,7 +527,7 @@ highlightarrow:2,19,cardarrow;
 doturn;
 
 when(laserhit:6,23)[dorow1turnR]
-when(laserhit:12,23)[dorow1turnR]
+when(laserhit:8,23)[dorow1turnR]
 dorow1turnR::;
 tileRow=1;
 tileCol=6;
@@ -537,7 +537,7 @@ highlightarrow:7,24,cardarrow;
 doturn;
 
 when(laserhit:12,23)[dorow3turnR]
-when(laserhit:18,23)[dorow3turnR]
+when(laserhit:14,23)[dorow3turnR]
 dorow3turnR::;
 tileRow=3;
 tileCol=6;
@@ -547,7 +547,7 @@ highlightarrow:13,24,cardarrow;
 doturn;
 
 when(laserhit:18,23)[dorow5turnR]
-when(laserhit:24,23)[dorow5turnR]
+when(laserhit:20,23)[dorow5turnR]
 dorow5turnR::;
 tileRow=5;
 tileCol=6;
@@ -556,9 +556,42 @@ oncol=false;
 highlightarrow:19,24,cardarrow;
 doturn;
 
+timer MyTimer=60,60,60,monsterturn
+arrow monsterarrow=red
+int monsterArrowCol
+int monsterArrowRow
+bool firstturn=true
+bool firstmonsterturn=true
+
+monsterturn::;
+((firstmonsterturn==true))[msg:"The lava, did you do that?"][msg:"The monsters are playing!"];
+firstmonsterturn=false;
+tileCol=0;
+tileRow=0;
+shiftdir=1;
+oncol=random(0)(1)==1;
+((oncol==true))tileCol=random(0)(2);
+((oncol==true))tileCol*=2;
+((oncol==true))tileCol+=1;
+((oncol==false))tileRow=random(0)(2);
+((oncol==false))tileRow*=2;
+((oncol==false))tileRow+=1;
+monsterArrowCol=tileCol;
+monsterArrowRow=tileRow;
+monsterArrowCol*=3;
+monsterArrowRow*=3;
+monsterArrowCol+=4;
+monsterArrowRow+=4;
+((oncol==true))highlightarrow:2,monsterArrowCol,monsterarrow;
+((oncol==false))highlightarrow:monsterArrowRow,2,monsterarrow;
+doturn;
+
 doturn::;
 shake:1;
+((firstturn==true))msg:"What is that?";
 wait:2;
+((firstturn==true))msg:"The lava is shifting!";
+firstturn=false;
 ((oncol==true))[docol][dorow];
 emergeMonsters;
 
