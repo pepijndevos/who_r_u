@@ -17,29 +17,29 @@ tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
-38,38,38,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,50,1,50,38,34,38,38,38,38,
-38,38,38,11,24,24,1,1,1,24,24,24,1,1,1,24,24,24,1,1,1,24,24,34,38,38,38,
-38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
-38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,38,6,38,50,1,50,38,6,38,50,1,50,38,6,38,50,1,50,38,34,38,38,38,38,
+38,38,38,6,24,24,1,1,1,24,24,24,1,1,1,24,24,24,1,1,1,24,24,34,38,38,38,
+38,38,38,38,24,6,6,1,6,6,24,6,6,1,6,6,24,6,6,1,6,6,24,38,38,38,38,
+38,38,38,50,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,50,38,38,38,
 38,38,38,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,38,38,38,
-38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
-38,38,38,38,24,38,38,1,38,38,11,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
-38,38,38,11,24,24,1,1,1,24,24,24,1,1,1,24,24,11,1,1,1,24,24,11,38,38,38,
-38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
-38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,50,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,50,38,38,38,
+38,38,38,38,24,6,6,1,6,6,6,6,6,1,6,6,24,6,6,1,6,6,24,38,38,38,38,
+38,38,38,6,24,24,1,1,1,24,24,24,1,1,1,24,24,6,1,1,1,24,24,6,38,38,38,
+38,38,38,38,24,6,6,1,6,6,24,6,6,1,6,6,24,6,6,1,6,6,24,38,38,38,38,
+38,38,38,50,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,50,38,38,38,
 38,38,38,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,38,38,38,
-38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
-38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
-38,38,38,11,24,24,1,1,1,11,24,24,1,1,1,24,24,24,1,1,1,24,24,11,38,38,38,
-38,38,38,38,24,38,38,1,38,38,24,38,38,1,38,38,11,38,38,1,38,38,24,38,38,38,38,
-38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
+38,38,38,50,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,50,38,38,38,
+38,38,38,38,24,6,6,1,6,6,24,6,6,1,6,6,24,6,6,1,6,6,24,38,38,38,38,
+38,38,38,6,24,24,1,1,1,6,24,24,1,1,1,24,24,24,1,1,1,24,24,6,38,38,38,
+38,38,38,38,24,6,6,1,6,6,24,6,6,1,6,6,6,6,6,1,6,6,24,38,38,38,38,
+38,38,38,50,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,50,38,38,38,
 38,38,38,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,38,38,38,
-38,38,38,50,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,38,38,1,50,38,38,38,
-38,38,38,38,14,38,38,1,38,38,24,38,38,1,38,38,24,38,38,1,38,38,24,38,38,38,38,
-38,38,38,11,14,24,1,1,1,24,24,24,1,1,1,24,24,24,1,1,1,24,24,11,38,38,38,
-38,38,1,11,11,38,50,1,50,38,11,38,50,1,50,38,11,38,50,1,50,38,11,38,38,38,38,
+38,38,38,50,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,6,6,1,50,38,38,38,
+38,38,38,38,14,6,6,1,6,6,24,6,6,1,6,6,24,6,6,1,6,6,24,38,38,38,38,
+38,38,38,50,14,24,1,1,1,24,24,24,1,1,1,24,24,24,1,1,1,24,24,6,38,38,38,
+38,6,1,6,50,38,50,1,50,38,6,38,50,1,50,38,6,38,50,1,50,38,6,38,38,38,38,
 38,1,1,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
-38,38,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,6,1,6,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 }
 height{
@@ -78,25 +78,25 @@ crystals:
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -131,7 +131,7 @@ ore:
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 }
 objectives{
-resources: 10,0,0
+resources: 30,0,0
 }
 buildings{
 BuildingToolStore_C,Translation: X=1350.000 Y=6750.000 Z=0.000 Rotation: P=0.000000 Y=0.000000 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Essential=true
@@ -141,8 +141,8 @@ landslidefrequency{
 lavaspread{
 }
 miners{
-ID=0/OFFICER,Translation: X=1605.766 Y=6786.297 Z=104.745 Rotation: P=0.008545 Y=-11.569593 R=0.012096 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
-ID=1,Translation: X=1671.409 Y=6714.937 Z=129.037 Rotation: P=0.000014 Y=-33.943352 R=-0.000020 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobExplosivesExpert/JobSailor/JobGeologist/JobDriver/JobEngineer/JobPilot/Level/Level/Level/Level/
+ID=1,Translation: X=1671.509 Y=6714.900 Z=129.562 Rotation: P=-0.000171 Y=-33.944912 R=0.000030 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobExplosivesExpert/JobSailor/JobGeologist/JobDriver/JobEngineer/JobPilot/Level/Level/Level/Level/
+ID=0/OFFICER,Translation: X=1605.681 Y=6786.895 Z=104.746 Rotation: P=-0.003640 Y=-11.533700 R=0.414018 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
 }
 briefing{
 Cadet, we're not even sure what we're dealing with. Our scanners indicate it's a cave with lava, but we're not getting consistent readings, as if the lava moves around in impossible patterns. Anyway, if you could collect 10 energy crystals that would be great. Good luck, Cadet.
@@ -152,11 +152,10 @@ briefingsuccess{
 }
 briefingfailure{
 
-
 }
 vehicles{
-VehicleSMLC_C,Translation: X=1595.104 Y=6766.296 Z=0.387 Rotation: P=0.000000 Y=-33.943371 R=0.000003 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1,Essential=true
-VehicleSmallTransportTruck_C,Translation: X=1609.338 Y=6784.909 Z=1.491 Rotation: P=-0.000061 Y=-11.581835 R=-0.000702 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0,Essential=true
+VehicleSMLC_C,Translation: X=1595.205 Y=6766.262 Z=0.384 Rotation: P=-0.000184 Y=-33.945019 R=0.000056 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1,Essential=true
+VehicleSmallTransportTruck_C,Translation: X=1609.138 Y=6785.020 Z=1.491 Rotation: P=0.000000 Y=-11.533770 R=-0.000458 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0,Essential=true
 }
 creatures{
 }
@@ -188,7 +187,7 @@ int placeY
 # player tile (the one you play with)
 int freeCard=0
 
-# unpack tile - extract 4 bits representing lava pieces (bit layout: WESN)
+# unpack tile - extract 4 bits representing lava pieces (bit layout: WSEN)
 tileSides::;
 # Extract North bit (bit 0: tile & 1)
 tempMask=tile;
@@ -221,6 +220,14 @@ tempMask=tile;
 tempMask/=8;
 W=false;
 ((tempMask==1))W=true;
+
+rotate::;
+tileSides;
+tile=0;
+((N==true))tile+=2;
+((E==true))tile+=4;
+((S==true))tile+=8;
+((W==true))tile+=1;
 
 # 7x7 crazy maze initialization system (adapted from A_Crazy_Maze.dat)
 
@@ -427,9 +434,13 @@ placeY-=1;
 printFreeCard::;
 tile=freeCard;
 tileSides;
+((get(23)(2)==tileIDfinal))N=placePolarity==false;
 ((N==placePolarity))place:23,2,tileID;
+((get(24)(3)==tileIDfinal))E=placePolarity==false;
 ((E==placePolarity))place:24,3,tileID;
+((get(25)(2)==tileIDfinal))S=placePolarity==false;
 ((S==placePolarity))place:25,2,tileID;
+((get(24)(1)==tileIDfinal))W=placePolarity==false;
 ((W==placePolarity))place:24,1,tileID;
 
 arrow cardarrow
@@ -439,129 +450,197 @@ int shiftdir=1
 when(laserhit:6,3)[dorow1turn]
 when(laserhit:8,3)[dorow1turn]
 dorow1turn::;
+((doingturn==true))return;
 tileRow=1;
 tileCol=0;
 shiftdir=1;
 oncol=false;
 highlightarrow:7,2,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:12,3)[dorow3turn]
 when(laserhit:14,3)[dorow3turn]
 dorow3turn::;
+((doingturn==true))return;
 tileRow=3;
 tileCol=0;
 shiftdir=1;
 oncol=false;
 highlightarrow:13,2,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:18,3)[dorow5turn]
 when(laserhit:20,3)[dorow5turn]
 dorow5turn::;
+((doingturn==true))return;
 tileRow=5;
 tileCol=0;
 shiftdir=1;
 oncol=false;
 highlightarrow:19,2,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:23,6)[docol1turn]
 when(laserhit:23,8)[docol1turn]
 docol1turn::;
+((doingturn==true))return;
 tileCol=1;
 tileRow=6;
 shiftdir=0-1;
 oncol=true;
 highlightarrow:24,7,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:23,12)[docol3turn]
 when(laserhit:23,14)[docol3turn]
 docol3turn::;
+((doingturn==true))return;
 tileCol=3;
 tileRow=6;
 shiftdir=0-1;
 oncol=true;
 highlightarrow:24,13,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:23,18)[docol5turn]
 when(laserhit:23,20)[docol5turn]
 docol5turn::;
+((doingturn==true))return;
 tileCol=5;
 tileRow=6;
 shiftdir=0-1;
 oncol=true;
 highlightarrow:24,19,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:3,6)[docol1turnR]
 when(laserhit:3,8)[docol1turnR]
 docol1turnR::;
+((doingturn==true))return;
 tileCol=1;
 tileRow=0;
 shiftdir=1;
 oncol=true;
 highlightarrow:2,7,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:3,12)[docol3turnR]
 when(laserhit:3,14)[docol3turnR]
 docol3turnR::;
+((doingturn==true))return;
 tileCol=3;
 tileRow=0;
 shiftdir=1;
 oncol=true;
 highlightarrow:2,13,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:3,18)[docol5turnR]
 when(laserhit:3,20)[docol5turnR]
 docol5turnR::;
+((doingturn==true))return;
 tileCol=5;
 tileRow=0;
 shiftdir=1;
 oncol=true;
 highlightarrow:2,19,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:6,23)[dorow1turnR]
 when(laserhit:8,23)[dorow1turnR]
 dorow1turnR::;
+((doingturn==true))return;
 tileRow=1;
 tileCol=6;
 shiftdir=0-1;
 oncol=false;
 highlightarrow:7,24,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:12,23)[dorow3turnR]
 when(laserhit:14,23)[dorow3turnR]
 dorow3turnR::;
+((doingturn==true))return;
 tileRow=3;
 tileCol=6;
 shiftdir=0-1;
 oncol=false;
 highlightarrow:13,24,cardarrow;
+monsterturn=false;
 doturn;
 
 when(laserhit:18,23)[dorow5turnR]
 when(laserhit:20,23)[dorow5turnR]
 dorow5turnR::;
+((doingturn==true))return;
 tileRow=5;
 tileCol=6;
 shiftdir=0-1;
 oncol=false;
 highlightarrow:19,24,cardarrow;
+monsterturn=false;
 doturn;
 
-timer MyTimer=60,60,60,monsterturn
+when(laserhit:22,3)[rotateFreeCard]
+when(laserhit:23,4)[rotateFreeCard]
+rotateFreeCard::;
+((doingturn==true))return;
+doingturn=true;
+tile=freeCard;
+rotate;
+freeCard=tile;
+placePolarity=false;
+tileID=10;
+tileIDfinal=6;
+printFreeCard;
+wait:erosionDelay;
+tileID=9;
+printFreeCard;
+wait:erosionDelay;
+tileID=8;
+printFreeCard;
+wait:erosionDelay;
+tileID=7;
+printFreeCard;
+wait:erosionDelay;
+tileID=6;
+printFreeCard;
+wait:erosionDelay;
+placePolarity=true;
+tileIDfinal=1;
+tileID=7;
+printFreeCard;
+wait:erosionDelay;
+tileID=8;
+printFreeCard;
+wait:erosionDelay;
+tileID=9;
+printFreeCard;
+wait:erosionDelay;
+tileID=10;
+printFreeCard;
+wait:erosionDelay;
+tileID=1;
+printFreeCard;
+doingturn=false;
+
+#timer MyTimer=60,60,60,monsterturn
 arrow monsterarrow=red
 int monsterArrowCol
 int monsterArrowRow
 bool firstturn=true
 bool firstmonsterturn=true
+bool monsterturn=false
 
 monsterturn::;
 ((firstmonsterturn==true))[msg:"The lava, did you do that?"][msg:"The monsters are playing!"];
@@ -584,9 +663,13 @@ monsterArrowCol+=4;
 monsterArrowRow+=4;
 ((oncol==true))highlightarrow:2,monsterArrowCol,monsterarrow;
 ((oncol==false))highlightarrow:monsterArrowRow,2,monsterarrow;
+monsterturn=true;
 doturn;
 
+bool doingturn=false
+
 doturn::;
+doingturn=true;
 shake:1;
 ((firstturn==true))msg:"What is that?";
 wait:2;
@@ -594,6 +677,9 @@ wait:2;
 firstturn=false;
 ((oncol==true))[docol][dorow];
 emergeMonsters;
+wait:10;
+doingturn=false;
+((monsterturn==false))monsterturn;
 
 int temptile
 float erosionDelay=0.5
