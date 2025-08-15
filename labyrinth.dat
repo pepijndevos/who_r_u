@@ -251,6 +251,7 @@ int tempResult
 
 # initialize complete 7x7 board
 init::;
+disable:buildings;
 fillFreePartsArray;
 buildGame;
 
@@ -447,9 +448,39 @@ arrow cardarrow
 bool oncol=false
 int shiftdir=1
 
+# Track previous move to prevent undoing
+bool lastoncol=false
+int lasttilerow=0
+int lasttilecol=0
+int lastshiftdir=1
+bool movevalid=false
+
+validateMove::;
+movevalid=true;
+((firstturn==true))return;
+# Disallow if: same row/col AND opposite direction
+((oncol==lastoncol))checkSameRowCol;
+return;
+
+checkSameRowCol::;
+((oncol==true))checkSameCol;
+((oncol==false))checkSameRow;
+
+checkSameCol::;
+((tileCol==lasttilecol))checkOppositeDirection;
+return;
+
+checkSameRow::;
+((tileRow==lasttilerow))checkOppositeDirection;
+return;
+
+checkOppositeDirection::;
+((shiftdir!=lastshiftdir))movevalid=false;
+
 when(laserhit:6,3)[dorow1turn]
 when(laserhit:8,3)[dorow1turn]
 dorow1turn::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileRow=1;
 tileCol=0;
@@ -462,6 +493,7 @@ doturn;
 when(laserhit:12,3)[dorow3turn]
 when(laserhit:14,3)[dorow3turn]
 dorow3turn::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileRow=3;
 tileCol=0;
@@ -474,6 +506,7 @@ doturn;
 when(laserhit:18,3)[dorow5turn]
 when(laserhit:20,3)[dorow5turn]
 dorow5turn::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileRow=5;
 tileCol=0;
@@ -486,6 +519,7 @@ doturn;
 when(laserhit:23,6)[docol1turn]
 when(laserhit:23,8)[docol1turn]
 docol1turn::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileCol=1;
 tileRow=6;
@@ -498,6 +532,7 @@ doturn;
 when(laserhit:23,12)[docol3turn]
 when(laserhit:23,14)[docol3turn]
 docol3turn::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileCol=3;
 tileRow=6;
@@ -510,6 +545,7 @@ doturn;
 when(laserhit:23,18)[docol5turn]
 when(laserhit:23,20)[docol5turn]
 docol5turn::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileCol=5;
 tileRow=6;
@@ -522,6 +558,7 @@ doturn;
 when(laserhit:3,6)[docol1turnR]
 when(laserhit:3,8)[docol1turnR]
 docol1turnR::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileCol=1;
 tileRow=0;
@@ -534,6 +571,7 @@ doturn;
 when(laserhit:3,12)[docol3turnR]
 when(laserhit:3,14)[docol3turnR]
 docol3turnR::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileCol=3;
 tileRow=0;
@@ -546,6 +584,7 @@ doturn;
 when(laserhit:3,18)[docol5turnR]
 when(laserhit:3,20)[docol5turnR]
 docol5turnR::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileCol=5;
 tileRow=0;
@@ -558,6 +597,7 @@ doturn;
 when(laserhit:6,23)[dorow1turnR]
 when(laserhit:8,23)[dorow1turnR]
 dorow1turnR::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileRow=1;
 tileCol=6;
@@ -570,6 +610,7 @@ doturn;
 when(laserhit:12,23)[dorow3turnR]
 when(laserhit:14,23)[dorow3turnR]
 dorow3turnR::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileRow=3;
 tileCol=6;
@@ -582,6 +623,7 @@ doturn;
 when(laserhit:18,23)[dorow5turnR]
 when(laserhit:20,23)[dorow5turnR]
 dorow5turnR::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 tileRow=5;
 tileCol=6;
@@ -594,6 +636,7 @@ doturn;
 when(laserhit:22,3)[rotateFreeCard]
 when(laserhit:23,4)[rotateFreeCard]
 rotateFreeCard::;
+((doingturn==true))msg:"Grrrr";
 ((doingturn==true))return;
 doingturn=true;
 tile=freeCard;
@@ -643,8 +686,6 @@ bool firstmonsterturn=true
 bool monsterturn=false
 
 monsterturn::;
-((firstmonsterturn==true))[msg:"The lava, did you do that?"][msg:"The monsters are playing!"];
-firstmonsterturn=false;
 tileCol=0;
 tileRow=0;
 shiftdir=1;
@@ -655,6 +696,12 @@ oncol=random(0)(1)==1;
 ((oncol==false))tileRow=random(0)(2);
 ((oncol==false))tileRow*=2;
 ((oncol==false))tileRow+=1;
+validateMove;
+((movevalid==true))[continueMonsterTurn][monsterturn];
+
+continueMonsterTurn::;
+((firstmonsterturn==true))[msg:"The lava, did you do that?"][msg:"The monsters are playing!"];
+firstmonsterturn=false;
 monsterArrowCol=tileCol;
 monsterArrowRow=tileRow;
 monsterArrowCol*=3;
@@ -669,6 +716,15 @@ doturn;
 bool doingturn=false
 
 doturn::;
+validateMove;
+((movevalid==false))msg:"Grrrr";
+((movevalid==false))return;
+# Save current move as the last move (before we modify anything)
+lastoncol=oncol;
+lasttilerow=tileRow;
+lasttilecol=tileCol;
+lastshiftdir=shiftdir;
+# Continue with existing doturn logic
 doingturn=true;
 shake:1;
 ((firstturn==true))msg:"What is that?";
