@@ -72,40 +72,176 @@ DAT files use a structured text format with sections enclosed in curly braces. *
 3. **Confirm square brackets**: All trigger events must be in `[event]` format
 4. **Test coordinate validity**: Use exact row/col from tiles grid, not file line numbers
 
-## Scripting System - Deep Technical Reference
+## Scripting System - Complete Syntax Reference
 
-### Quick Syntax Reference (For Fast Lookup)
+### THE FOUR FUNDAMENTAL SYNTAX RULES (MEMORIZE THESE!)
+
+**1. TRIGGERS = NO SEMICOLONS, ALWAYS SQUARE BRACKETS**
+**2. EVENTS IN CHAINS = ALWAYS SEMICOLONS, NO SEMICOLONS AFTER SEMICOLONS**  
+**3. CONDITIONS = DOUBLE PARENTHESES (()), SINGLE CONDITIONS ONLY**
+**4. VARIABLE DECLARATIONS = TOP LEVEL ONLY, NO SEMICOLONS**
+
+### Complete Trigger Syntax (From docs/_pages/Triggers.md)
 ```mms
-# TRIGGERS (NO semicolons, square brackets around events)
-if(condition)[event]                    # Single-fire trigger  
-when(condition)[event]                  # Repeating trigger
-if(condition)((check))[trueevent][falseevent]  # Conditional trigger
+# THE 6 OFFICIAL TRIGGER FORMS - NO OTHER VARIATIONS EXIST!
 
-# EVENT CHAINS (semicolons required, blank line ends chain)
-myChain::;
-event1;
-event2;
-((condition))event3;
+# Single event triggers (most common)
+if(TRIGGER)[TRUEEVENT]                          # Fire once, single event
+when(TRIGGER)[TRUEEVENT]                        # Fire repeatedly, single event
 
-# VARIABLE DECLARATIONS (at top level, NO semicolons)
-int myVar=5
-string myMsg="Hello"
-miner myMiner=0
+# Conditional triggers with single event (no false branch)
+if(TRIGGER)((CONDITIONAL))[TRUEEVENT]           # Fire once, conditional
+when(TRIGGER)((CONDITIONAL))[TRUEEVENT]         # Fire repeatedly, conditional  
 
-# COMMON EVENTS (inside event chains only)
-msg:"Text";                            # Display message
-place:row,col,tileID;                  # Place tile
-win:"Victory!";                        # End level successfully
+# Conditional triggers with both true and false events
+if(TRIGGER)((CONDITIONAL))[TRUEEVENT][FALSEEVENT]     # Fire once, both branches
+when(TRIGGER)((CONDITIONAL))[TRUEEVENT][FALSEEVENT]   # Fire repeatedly, both branches
 ```
 
-### Critical Syntax Rules (Most Important)
-1. **NO SPACES** at line beginnings, endings, or in middle of lines (except in strings)
-2. **NO SPACES** after semicolons (most common error causing script failures)
-3. All events in event chains **MUST** end with semicolon `;`
-4. Triggers do **NOT** end with semicolons
-5. Coordinates always in **row,col** order (Y,X format, not X,Y)
-6. Blank lines end event chains (comments do not count as blank lines)
-7. `#` character **always** starts a comment regardless of position
+**CRITICAL TRIGGER RULES:**
+- **NEVER add semicolons to triggers** - `if(condition)[event];` breaks ALL functionality
+- **ALWAYS use square brackets** around events - `if(condition)event` doesn't work
+- **NEVER nest conditions** - `((cond1))((cond2))` is not allowed in triggers
+- **ALWAYS use literal values** in trigger parameters - no variables allowed
+
+### Complete Event Chain Syntax (From docs/_pages/Events.md)
+```mms
+# EVENT CHAIN STRUCTURE
+myChain::;                              # Chain declaration (NO semicolon at end)
+event1;                                 # Event with semicolon
+event2;                                 # Event with semicolon
+((condition))event3;                    # Conditional event with semicolon
+((condition))[trueevent][falseevent];   # Conditional with both branches
+                                        # Blank line ends chain
+```
+
+**CRITICAL EVENT CHAIN RULES:**
+- **ALWAYS end events with semicolons** - `msg:"Hello"` without `;` breaks the chain
+- **NEVER add spaces after semicolons** - `event1; event2;` breaks parsing
+- **BLANK LINES end chains** - not semicolons like other languages
+- **Comments do NOT count as blank lines** - chains continue after `# comment`
+
+### Complete Conditional Syntax (From docs/_pages/Conditions.md)
+```mms
+# SINGLE CONDITIONS ONLY - NO COMPLEX EXPRESSIONS!
+
+# In event chains - conditional events
+((variable==5))event;                   # Single event if true
+((variable==5))[trueevent][falseevent]; # Both true and false events
+
+# In triggers - conditional triggers  
+if(time:60.0)((crystals>=10))[win:"Victory!"][msg:"Need more crystals"]
+
+# COMPARISON OPERATORS ONLY
+>  >=  <  <=  ==  !=                   # These are the ONLY operators allowed
+
+# FORBIDDEN - THESE WILL NOT WORK!
+((health+stamina>100))event;            # ❌ No math in conditions
+((crystals>=10))((ore>=5))event;        # ❌ No nested conditions  
+((random(0)(miners)>5))event;           # ❌ No nested macros
+```
+
+**CRITICAL CONDITIONAL RULES:**
+- **ONLY simple comparisons** - left side, operator, right side
+- **NO math operations** in conditions - calculate separately first
+- **NO nested conditions** - use separate event chains instead
+- **NO nested macro calls** - `random(0)(miners)` not allowed
+
+### Variable Declaration Syntax (Top Level Only)
+```mms
+# AT TOP LEVEL OF SCRIPT SECTION - NO SEMICOLONS EVER!
+int myVar=5                             # ✅ Correct
+string myMsg="Hello"                    # ✅ Correct  
+bool myFlag=true                        # ✅ Correct
+vehicle myVehicle=1                     # ✅ Correct
+
+# FORBIDDEN PATTERNS
+int myVar=5;                            # ❌ No semicolons on declarations
+myVar=10;                               # ❌ No assignments at top level
+```
+
+### Variable Assignment Syntax (Event Chains Only)
+```mms
+# INSIDE EVENT CHAINS - ALWAYS SEMICOLONS!
+myChain::;
+myVar=10;                               # ✅ Assignment with semicolon
+myVar+=5;                               # ✅ Math operation with semicolon  
+myString="New value";                   # ✅ String assignment with semicolon
+```
+
+### Complete Examples Showing All Patterns
+```mms
+# VARIABLE DECLARATIONS (top level, no semicolons)
+int playerHealth=100
+int crystalsNeeded=50
+bool gameWon=false
+string winMessage="Congratulations!"
+vehicle playerVehicle=0
+
+# TRIGGERS (no semicolons, always square brackets)
+if(time:30.0)[checkWinCondition]                    # Simple trigger
+when(crystals>=50)[tryToWin]                        # Macro comparison trigger
+if(drill:5,10)((playerHealth>50))[safeEvent][dangerEvent]  # Conditional trigger
+
+# EVENT CHAINS (semicolons on all events, blank line ends)
+checkWinCondition::;
+playerHealth=get(playerVehicle.row)(playerVehicle.col);  # Assignment
+((crystals>=crystalsNeeded))attemptVictory;             # Conditional event
+msg:"Time's up!";                                       # Simple event
+
+attemptVictory::;
+((gameWon==false))[win:winMessage][msg:"Already won"];  # Conditional with both branches
+
+safeEvent::;
+msg:"Drilling successful!";
+playerHealth+=10;
+
+dangerEvent::;
+msg:"Dangerous drilling!";
+playerHealth-=20;
+((playerHealth<=0))[lose:"You died!"];
+```
+
+### Critical Error Patterns to NEVER Use
+```mms
+# THESE PATTERNS BREAK EVERYTHING!
+
+# ❌ WRONG - Semicolons on triggers (most common error)
+if(time:60.0)[win:"Victory!"];          # Breaks ALL script functionality!
+when(enter:5,10)[event];                # Kills the entire trigger system!
+
+# ❌ WRONG - Missing square brackets on triggers  
+if(time:60.0)win:"Victory!"             # Trigger doesn't work
+when(enter:5,10)msg:"Hello"             # Event never fires
+
+# ❌ WRONG - No semicolons in event chains
+myChain::;
+msg:"Hello"                             # Chain breaks here
+msg:"World"                             # This never executes
+
+# ❌ WRONG - Spaces after semicolons in chains
+msg:"Hello"; msg:"World";               # Parsing fails completely
+
+# ❌ WRONG - Complex conditions (not supported)
+((health+stamina>100))event;            # Must split into separate operations
+((crystals>=10))((ore>=5))event;        # Must use separate event chains
+
+# ❌ WRONG - Variable declarations with semicolons
+int myVar=5;                            # Should be: int myVar=5
+
+# ❌ WRONG - Variable assignments at top level  
+myVar=10;                               # Must be inside event chain
+
+# ❌ WRONG - Variables in trigger parameters
+if(time:myDelay)[event]                 # Must use literal values only
+```
+
+### Performance and Limitations
+- **Macro usage**: Minimize macros in `when` triggers (evaluated every tick)
+- **Recursive operations**: Add `wait:0.0` to prevent game lockup  
+- **Tile modifications**: Max ~630 tiles per trigger context
+- **Water/lava**: Cannot mix with other tile changes in same trigger
+- **Reentrancy**: `when` triggers can interrupt themselves (~890 call limit)
 
 ### Variable Types and Declarations
 ```mms
@@ -901,16 +1037,17 @@ building toolStore=10,15    # Building at that tile position
 
 ## Summary: The Five Most Critical Rules for Success
 
-1. **TRIGGERS NEVER HAVE SEMICOLONS**: `if(condition)[event]` not `if(condition)[event];`
-2. **COORDINATES ARE ROW,COL (Y,X)**: Count from tiles{} grid start, ignore file line numbers
-3. **EVENTS NEED SEMICOLONS IN CHAINS**: `msg:"Hello";` inside event chains, never at top level
-4. **VARIABLES AT TOP, ASSIGNMENTS IN CHAINS**: Declare variables at top level, assign in event chains
-5. **SQUARE BRACKETS AROUND ALL TRIGGER EVENTS**: `when(click)[msg:"Hello"]` not `when(click)msg:"Hello"`
+1. **TRIGGERS = NO SEMICOLONS + SQUARE BRACKETS**: `if(condition)[event]` NEVER `if(condition)[event];`
+2. **EVENTS = SEMICOLONS + NO SPACES AFTER**: `msg:"Hello";` NEVER `msg:"Hello"; `
+3. **CONDITIONS = SINGLE ONLY**: `((var==5))event;` NEVER `((var==5))((other==3))event;`
+4. **VARIABLES = TOP LEVEL DECLARATIONS**: `int myVar=5` at top, `myVar=10;` in chains only
+5. **COORDINATES = ROW,COL (Y,X)**: Count from tiles{} grid start, ignore file line numbers
 
-**GOLDEN RULES**: 
-- If it's not explicitly documented, assume it doesn't work
-- When in doubt, check the Level Editor Script Interface for coordinates
-- Test early and often - the language is unforgiving of syntax errors
+**GOLDEN RULES FOR SYNTAX**: 
+- **6 trigger forms only** - if it's not in the official 6 forms, it doesn't work
+- **No complex expressions** - if it looks like math or programming logic, break it down
+- **No nested anything** - conditions, macros, function calls must be separate operations
+- **When in doubt, use the simplest form** - the language is deliberately limited
 
 ## Critical Lessons Learned from Implementation (Updated January 2025)
 
@@ -979,3 +1116,137 @@ setValueFromArray::;
 ```
 
 This pattern allows flexible switching between data sources while maintaining proper single-condition syntax.
+
+### Vehicle Trigger Timing Issues and `lastvehicle` Macro
+When using vehicle enter triggers, there's a race condition where the trigger fires before the vehicle's row/col properties are fully updated to the new position.
+
+**PROBLEM**: Direct vehicle position checking fails due to timing:
+```mms
+# WRONG - Race condition where vehicle position not yet updated
+vehicleEnteredPortal::;
+tempTileId=get(gg.row)(gg.col);  # May get old position, not new position
+```
+
+**SOLUTION**: Use `lastvehicle` macro to identify triggering vehicle and test the OTHER vehicle:
+```mms
+# CORRECT - Test the non-triggering vehicle to avoid race condition
+vehicleEnteredPortal::;
+((lastvehicle.id==gg.id))checkLmlcOnPortal;    # If gg triggered, check lmlc
+((lastvehicle.id==lmlc.id))checkGgOnPortal;    # If lmlc triggered, check gg
+
+checkLmlcOnPortal::;
+tempTileId=get(lmlc.row)(lmlc.col);             # lmlc position is stable
+((tempTileId==12))[activatePortal][msg:"First vehicle on portal - bring the second!"];
+```
+
+**Key Points**:
+- `lastvehicle` returns the vehicle object that triggered the event
+- Must compare `lastvehicle.id` to `vehicle.id` (not direct object comparison)
+- Test the NON-triggering vehicle's position for accurate results
+- This pattern works for any multi-vehicle coordination system
+
+### Block System for Advanced Triggers (docs/_pages/DATSectionblocks.md)
+The block system provides visual triggers with built-in cooldowns that integrate with script event chains.
+
+**Block System Benefits**:
+- Built-in cooldown timers (no manual timing logic needed)
+- Visual representation in Level Editor
+- Can call script event chains directly
+- Automatic wire management between triggers and events
+
+**Portal Trigger Example**:
+```
+# Portal blocks generated by Python script
+1/EventCallEvent:19,1,5.0,vehicleEnteredPortal
+2/TriggerEnter:19,1,5.0,_,false,true
+2-1  # Wire connecting trigger to event
+```
+
+**Python Generation Pattern**:
+```python
+def generate_drive_triggers(portal_locations, event_name="vehicleEnteredPortal", cooldown=5.0):
+    block_id = 1
+    for row, col in portal_locations:
+        # Generate EventCallEvent block
+        triggers.append(f"{block_id}/EventCallEvent:{row},{col},{cooldown},{event_name}")
+        block_id += 1
+        
+        # Generate TriggerEnter block  
+        trigger_block_id = block_id
+        triggers.append(f"{trigger_block_id}/TriggerEnter:{row},{col},{cooldown},_,false,true")
+        block_id += 1
+        
+        # Generate wire
+        wires.append(f"{trigger_block_id}-{event_block_id}")
+```
+
+**Use Cases**:
+- Portal systems with cooldowns
+- Multi-location trigger management
+- Complex trigger sequences with timing
+- Integration between visual design and script logic
+
+### Cave ID Normalization (+100 Handling)
+Undiscovered caves have +100 added to their tile IDs. This affects recursive map reading functions.
+
+**PROBLEM**: Reading undiscovered caves returns wrong tile IDs:
+```mms
+# Cave with tile ID 1 shows as 101 when undiscovered
+tempTileId=get(currentRow)(currentCol);  # Returns 101, not 1
+```
+
+**SOLUTION**: Normalize tile IDs in reading functions:
+```mms
+readFromMapToArray::;
+tempTileId=get(currentRow)(currentCol);
+((tempTileId>100))tempTileId-=100;      # Normalize cave IDs
+leftHalfTiles[arrayIndex]=tempTileId;
+```
+
+**When to Apply**:
+- Any function that reads tile data for storage/comparison
+- Map copying and array storage systems
+- Tile analysis and pattern matching
+- NOT needed when using `place:` events (they handle normalization automatically)
+
+### Conditional Logic Optimization with `[true][false]` Syntax
+Use the compact conditional syntax for cleaner code:
+
+**VERBOSE**:
+```mms
+((condition))trueEvent;
+((condition!=true))falseEvent;  # Wrong approach - double evaluation
+```
+
+**OPTIMIZED**:
+```mms
+((condition))[trueEvent][falseEvent];  # Single evaluation, both branches
+```
+
+**Best Practice**: Use `[true][false]` syntax when you need both branches, single event without brackets when you only need the true case.
+
+### Advanced Recursive Patterns with Performance Optimization
+Large recursive operations (400+ iterations) require performance considerations:
+
+**CRITICAL**: Add `wait:0.0` to prevent game lockup:
+```mms
+recursiveLoop::;
+((arrayIndex<=maxArrayIndex))processElement;
+# ... processing logic ...
+wait:0.0;                    # ESSENTIAL - yields control to prevent lockup
+recursiveLoop;               # Continue recursion
+```
+
+**Task Queue Pattern** for Sequential Operations:
+```mms
+int nextTask=0  # 0=done, 1=task1, 2=task2, 3=task3
+
+completionHandler::;
+copyInProgress=false;
+((nextTask==1))startTask1;
+((nextTask==2))startTask2;
+((nextTask==3))startTask3;
+nextTask=0;
+```
+
+This pattern ensures operations complete before starting the next task, preventing race conditions in complex systems.
