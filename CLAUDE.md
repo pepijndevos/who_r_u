@@ -911,3 +911,71 @@ building toolStore=10,15    # Building at that tile position
 - If it's not explicitly documented, assume it doesn't work
 - When in doubt, check the Level Editor Script Interface for coordinates
 - Test early and often - the language is unforgiving of syntax errors
+
+## Critical Lessons Learned from Implementation (Updated January 2025)
+
+### DAT File Reading Issues
+**IMPORTANT**: Sometimes the Read tool fails to read .dat files even though they are ASCII text with CRLF line endings. When this happens:
+- Use `file filename.dat` to verify it's ASCII text
+- Use `bash` commands like `head`, `tail`, `cat` to read the file content
+- The file IS readable ASCII text, the Read tool just sometimes fails on .dat extensions
+
+### Nested Conditions Are NOT Allowed (Critical!)
+**WRONG - This violates the single-condition rule:**
+```mms
+((arrayIndex<=maxArrayIndex))((useLeftArray==true))tempTileId=leftHalfTiles[arrayIndex];
+```
+
+**CORRECT - Break into separate event chains:**
+```mms
+((arrayIndex<=maxArrayIndex))setTempTileFromArray;
+
+setTempTileFromArray::;
+((useLeftArray==true))tempTileId=leftHalfTiles[arrayIndex];
+((useLeftArray==false))tempTileId=rightHalfTiles[arrayIndex];
+```
+
+From `docs/_pages/Conditions.md`: "Only simple comparison conditions are allowed, complex and/or conditions or math operations are not supported."
+
+### Square Brackets Only for True/False Events
+**WRONG - Don't use brackets for single events:**
+```mms
+((condition))[event];
+```
+
+**CORRECT - Only use brackets when you have BOTH true and false events:**
+```mms
+((condition))event;                    # Single event only
+((condition))[trueevent][falseevent];  # Both true and false events
+```
+
+From the conditions documentation: when there's only a true event (no false event), you don't use square brackets.
+
+### Recursive Function Performance Issues  
+When implementing recursive copying functions that process hundreds of tiles:
+- Remove debug messages (`msg:"Completed"`) to prevent log spam
+- Recursive functions work correctly but generate many log entries during execution
+- Focus on the final result rather than step-by-step progress messages
+- Consider this normal behavior for large recursive operations (462 tiles = 462 recursive calls)
+
+### Code Reuse and Duplicate Functions
+Always check for duplicate helper functions:
+- `resetColAndAdvanceRow` vs `resetColAndAdvanceRowPlace` were identical
+- Reuse existing functions instead of creating duplicates
+- Keep code DRY (Don't Repeat Yourself) even in Manic Miners scripting
+
+### Boolean Array Selection Pattern
+For conditional array access, use a separate event chain:
+```mms
+bool useLeftArray=true
+
+# In main function:
+((condition))setValueFromArray;
+
+# Separate helper function:
+setValueFromArray::;
+((useLeftArray==true))value=leftArray[index];
+((useLeftArray==false))value=rightArray[index];
+```
+
+This pattern allows flexible switching between data sources while maintaining proper single-condition syntax.
