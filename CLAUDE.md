@@ -39,7 +39,7 @@ when(TRIGGER)((CONDITION))[TRUEEVENT][FALSEEVENT] # Fire repeatedly, both branch
 
 ### Event Chain Syntax
 ```mms
-myChain::;                              # Chain declaration (no semicolon)
+myChain::;                              # Chain declaration
 event1;                                 # Event with semicolon
 ((condition))event2;                    # Conditional event
 ((condition))[trueevent][falseevent];   # Both branches
