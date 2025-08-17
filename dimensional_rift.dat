@@ -34,7 +34,7 @@ tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,101,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,50,38,38,50,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,101,38,38,101,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,12,1,1,12,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,112,38,38,112,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
-38,1,1,1,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,50,38,38,50,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,1,24,24,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,50,38,38,50,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 }
 height{
@@ -119,8 +119,8 @@ landslidefrequency{
 lavaspread{
 }
 miners{
-ID=1,Translation: X=940.611 Y=6238.700 Z=222.247 Rotation: P=-0.000082 Y=1.082946 R=-0.000390 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
-ID=0,Translation: X=770.716 Y=6152.088 Z=91.811 Rotation: P=0.008428 Y=172.443146 R=-0.168288 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=1,Translation: X=1072.813 Y=6240.530 Z=223.608 Rotation: P=-0.313130 Y=1.096603 R=0.462652 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=0,Translation: X=604.884 Y=6304.750 Z=128.427 Rotation: P=4.367673 Y=146.641022 R=5.246636 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
 }
 briefing{
 
@@ -132,17 +132,17 @@ briefingfailure{
 
 }
 vehicles{
-VehicleLMLC_C,Translation: X=999.391 Y=6121.703 Z=0.035 Rotation: P=0.008435 Y=172.443100 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
-VehicleGraniteGrinder_C,Translation: X=909.705 Y=6238.070 Z=-0.536 Rotation: P=-0.000096 Y=1.082966 R=-0.000031 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
+VehicleLMLC_C,Translation: X=795.927 Y=6189.318 Z=19.374 Rotation: P=4.367673 Y=146.640839 R=5.407053 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
+VehicleGraniteGrinder_C,Translation: X=1040.722 Y=6238.065 Z=0.509 Rotation: P=-0.313137 Y=1.096617 R=0.463038 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
 }
 creatures{
 }
 blocks{
 1/EventCallEvent:13,1,5.0,vehicleEnteredPortal
-2/TriggerEnter:13,1,5.0,_,false,true
 3/EventCallEvent:19,1,5.0,vehicleEnteredPortal
-4/TriggerEnter:19,1,5.0,_,false,true
 5/EventCallEvent:19,4,5.0,vehicleEnteredPortal
+2/TriggerEnter:13,1,5.0,_,false,true
+4/TriggerEnter:19,1,5.0,_,false,true
 6/TriggerEnter:19,4,5.0,_,false,true
 2-1
 4-3
@@ -185,16 +185,14 @@ bool copyInProgress=false
 # Generalized loop control variables
 bool leftMap=true
 bool leftArray=true
-bool read=true
 
 # Dimension tracking
 bool inNormalDimension=true
 
 # Task queue for sequential operations (enum values)
 # 0 = done/no next task
-# 1 = readRightHalfToArray (init sequence)
-# 2 = loadRightArrayToLeftMap (switch to alternate dimension)
-# 3 = loadLeftArrayToLeftMap (switch to normal dimension)
+# 1 = startArea
+# 2 = readRightHalfToArray (init sequence)
 int nextTask=0
 
 # Vehicle variables
@@ -208,19 +206,17 @@ rightColStart=halfCols;
 maxRowIndex=mapRows-1;
 maxArrayIndex=mapRows*halfCols;
 maxArrayIndex-=1;
-nextTask=1;
+nextTask=2;
 readLeftHalfToArray;
 
 readLeftHalfToArray::;
 leftMap=true;
 leftArray=true;
-read=true;
 generalizedLoop;
 
 readRightHalfToArray::;
 leftMap=false;
 leftArray=false;
-read=true;
 generalizedLoop;
 
 # Generalized loop for reading/writing map halves to/from arrays
@@ -238,24 +234,15 @@ copyInProgress=true;
 ((leftMap==false))maxCols=mapCols;
 
 processArrayElement::;
-((read==true))readFromMapToArray;
-((read==false))writeFromArrayToMap;
-incrementAndAdvance;
-
-readFromMapToArray::;
 tempTileId=get(currentRow)(currentCol);
 ((tempTileId>100))tempTileId-=100;
 ((leftArray==true))leftHalfTiles[arrayIndex]=tempTileId;
 ((leftArray==false))rightHalfTiles[arrayIndex]=tempTileId;
-
-writeFromArrayToMap::;
-tempTileId=get(currentRow)(currentCol);
-validTile=true
-((tempTileId>100))validTile=false;
+validTile=true;
 ((tempTileId==lava))validTile=false;
-((leftArray==true))tempTileId=leftHalfTiles[arrayIndex];
-((leftArray==false))tempTileId=rightHalfTiles[arrayIndex];
-((validTile==true))place:currentRow,currentCol,tempTileId;
+((tempTileId==24))validTile=false;
+((validTile==true))place:currentRow,currentCol,solid_rock;
+incrementAndAdvance;
 
 incrementAndAdvance::;
 arrayIndex+=1;
@@ -271,48 +258,122 @@ resetColAndAdvanceRow::;
 
 completionHandler::;
 copyInProgress=false;
-((nextTask==1))readRightHalfToArray;
-((nextTask==2))loadRightArrayToLeftMap;
-((nextTask==3))loadLeftArrayToLeftMap;
-nextTask=0;
+((nextTask==2))readRightHalfToArray;
+((nextTask==1))startArea;
+nextTask-=1;
+
+startArea::;
+leftArray=true;
+read=false;
+floodfill;
+
+# flood fill algorithm
+
+# flood fill variables
+intarray fillTileRows
+intarray fillTileCols
+int taskidx=0
+bool read=true
+
+floodfill::;
+fillTileRows[taskidx]=gg.row;
+fillTileCols[taskidx]=gg.col;
+taskidx+=1;
+fillTileRows[taskidx]=lmlc.row;
+fillTileCols[taskidx]=lmlc.col;
+taskidx+=1;
+doFloodFill;
+
+doFloodFill::;
+taskidx-=1;
+currentRow=fillTileRows[taskidx];
+currentCol=fillTileCols[taskidx];
+currentRow-=1;
+considerTile;
+currentCol+=1;
+considerTile;
+currentRow+=1;
+considerTile;
+currentRow+=1;
+considerTile;
+currentCol-=1;
+considerTile;
+currentCol-=1;
+considerTile;
+currentRow-=1;
+considerTile;
+currentRow-=1;
+considerTile;
+wait:0.0;
+((taskidx>0))[doFloodFill][completeFill];
+
+completeFill::;
+((read==false))return;
+read=false;
+leftArray=leftArray==false;
+wait:0.0;
+floodfill;
+
+considerTile::;
+((currentRow<0))return;
+((currentCol<0))return;
+((currentCol>=mapCols))return;
+((currentRow>=mapRows))return;
+tempTileId=get(currentRow)(currentCol);
+#((tempTileId==12))return;
+arrayIndex=currentRow*halfCols;
+arrayIndex+=currentCol;
+((read==true))[readMode][writeMode];
+
+readMode::;
+((leftArray==true))[checkReadLeft][checkReadRight];
+
+writeMode::;
+((leftArray==true))[checkWriteLeft][checkWriteRight];
+
+checkReadLeft::;
+((tempTileId==solid_rock))return;
+leftHalfTiles[arrayIndex]=tempTileId;
+tempTileId=solid_rock;
+fillTile;
+
+checkReadRight::;
+((tempTileId==solid_rock))return;
+rightHalfTiles[arrayIndex]=tempTileId;
+tempTileId=solid_rock;
+fillTile;
+
+checkWriteLeft::;
+((leftHalfTiles[arrayIndex]==tempTileId))return;
+tempTileId=leftHalfTiles[arrayIndex];
+fillTile;
+
+checkWriteRight::;
+((rightHalfTiles[arrayIndex]==tempTileId))return;
+tempTileId=rightHalfTiles[arrayIndex];
+fillTile;
+
+fillTile::;
+place:currentRow,currentCol,tempTileId;
+fillTileRows[taskidx]=currentRow;
+fillTileCols[taskidx]=currentCol;
+taskidx+=1;
 
 # Swap dimensions of the left map area
 swapDimensions::;
 ((inNormalDimension==true))[switchToAlternateDimension][switchToNormalDimension];
 
 switchToAlternateDimension::;
-nextTask=2;
 inNormalDimension=false;
-saveCurrentLeftMapToLeftArray;
+read=true;
+leftArray=true;
+floodfill;
 
 switchToNormalDimension::;
-nextTask=3;
 inNormalDimension=true;
-saveCurrentLeftMapToRightArray;
-
-saveCurrentLeftMapToLeftArray::;
-leftMap=true;
-leftArray=true;
 read=true;
-generalizedLoop;
-
-loadRightArrayToLeftMap::;
-leftMap=true;
 leftArray=false;
-read=false;
-generalizedLoop;
-
-saveCurrentLeftMapToRightArray::;
-leftMap=true;
-leftArray=false;
-read=true;
-generalizedLoop;
-
-loadLeftArrayToLeftMap::;
-leftMap=true;
-leftArray=true;
-read=false;
-generalizedLoop;
+floodfill;
 
 # Design utility: Copy slimy slug holes (portals) from left to right half
 copyPortals::;
