@@ -34,7 +34,7 @@ tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,101,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,50,38,38,50,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,101,38,38,101,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,12,1,1,12,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,112,38,38,112,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
-38,1,24,24,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,50,38,38,50,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,1,1,1,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,50,38,38,50,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
 }
 height{
@@ -119,8 +119,8 @@ landslidefrequency{
 lavaspread{
 }
 miners{
-ID=1,Translation: X=1072.813 Y=6240.530 Z=223.608 Rotation: P=-0.313130 Y=1.096603 R=0.462652 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
-ID=0,Translation: X=604.884 Y=6304.750 Z=128.427 Rotation: P=4.367673 Y=146.641022 R=5.246636 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=0,Translation: X=604.073 Y=6304.021 Z=127.268 Rotation: P=4.202888 Y=146.584793 R=4.994268 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=1,Translation: X=1072.064 Y=6238.966 Z=223.368 Rotation: P=-0.035524 Y=1.177783 R=0.045939 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
 }
 briefing{
 
@@ -132,21 +132,21 @@ briefingfailure{
 
 }
 vehicles{
-VehicleLMLC_C,Translation: X=795.927 Y=6189.318 Z=19.374 Rotation: P=4.367673 Y=146.640839 R=5.407053 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
-VehicleGraniteGrinder_C,Translation: X=1040.722 Y=6238.065 Z=0.509 Rotation: P=-0.313137 Y=1.096617 R=0.463038 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
+VehicleLMLC_C,Translation: X=795.065 Y=6187.932 Z=18.842 Rotation: P=4.202881 Y=146.584747 R=5.190917 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
+VehicleGraniteGrinder_C,Translation: X=1041.025 Y=6238.103 Z=0.463 Rotation: P=-0.035524 Y=1.177797 R=0.046333 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
 }
 creatures{
 }
 blocks{
-1/EventCallEvent:13,1,5.0,vehicleEnteredPortal
-3/EventCallEvent:19,1,5.0,vehicleEnteredPortal
 5/EventCallEvent:19,4,5.0,vehicleEnteredPortal
-2/TriggerEnter:13,1,5.0,_,false,true
-4/TriggerEnter:19,1,5.0,_,false,true
+3/EventCallEvent:19,1,5.0,vehicleEnteredPortal
+1/EventCallEvent:13,1,5.0,vehicleEnteredPortal
 6/TriggerEnter:19,4,5.0,_,false,true
-2-1
-4-3
+4/TriggerEnter:19,1,5.0,_,false,true
+2/TriggerEnter:13,1,5.0,_,false,true
 6-5
+4-3
+2-1
 }
 script{
 # Dimensional Rift - Dynamic Map Swapping System
@@ -172,6 +172,7 @@ intarray rightHalfTiles
 int currentRow=0
 int currentCol=0
 int arrayIndex=0
+int vehicleIndex=0
 
 # Additional utility variables for swapping operations
 int sourceRow=0
@@ -240,7 +241,13 @@ tempTileId=get(currentRow)(currentCol);
 ((leftArray==false))rightHalfTiles[arrayIndex]=tempTileId;
 validTile=true;
 ((tempTileId==lava))validTile=false;
-((tempTileId==24))validTile=false;
+((tempTileId==water))validTile=false;
+vehicleIndex=gg.row*halfCols;
+vehicleIndex+=gg.col;
+((arrayIndex==vehicleIndex))validTile=false;
+vehicleIndex=lmlc.row*halfCols;
+vehicleIndex+=lmlc.col;
+((arrayIndex==vehicleIndex))validTile=false;
 ((validTile==true))place:currentRow,currentCol,solid_rock;
 incrementAndAdvance;
 
@@ -320,9 +327,10 @@ considerTile::;
 ((currentCol>=mapCols))return;
 ((currentRow>=mapRows))return;
 tempTileId=get(currentRow)(currentCol);
-#((tempTileId==12))return;
 arrayIndex=currentRow*halfCols;
 arrayIndex+=currentCol;
+((tempTileId==lava))return;
+((tempTileId==water))return;
 ((read==true))[readMode][writeMode];
 
 readMode::;

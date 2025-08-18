@@ -17,8 +17,29 @@ DAT files have sections in curly braces. Key sections:
 3. **Verify object placement** before referencing in scripts
 4. **Test coordinates** within bounds (0 to rowcount-1, 0 to colcount-1)
 
-## Reading DAT Files
-**IMPORTANT**: Use `sed -n '/^script{/,/^}/p' filename.dat` to extract script sections, or `cat filename.dat` for full file. The Read tool has issues with .dat files.
+## Working with DAT Files
+**IMPORTANT**: DAT files have Windows line endings which cause Read tool issues. 
+
+### Recommended Workflow - TXT Conversion
+**For both reading and editing, convert to TXT format:**
+```bash
+# Copy to .txt and convert line endings 
+cp filename.dat filename.txt && dos2unix filename.txt
+
+# Use Read/Edit tools normally on the .txt file
+
+# Convert back to Windows line endings and copy to .dat
+unix2dos filename.txt && cp filename.txt filename.dat
+
+### Fallback - Command Line Reading Only
+**If you only need to read (not edit):**
+```bash
+# Extract just the script section
+sed -n '/^script{/,/^}/p' filename.dat
+
+# Read entire file
+cat filename.dat
+```
 
 ## Core Syntax Rules
 
