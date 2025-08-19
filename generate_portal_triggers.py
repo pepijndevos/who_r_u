@@ -116,7 +116,7 @@ def main():
         print(f"\nGenerated triggers written to: {output_file}")
         print("\nSample output:")
         print("-" * 50)
-        print(triggers_code[:500] + "..." if len(triggers_code) > 500 else triggers_code)
+        print(triggers_code)
         
     except Exception as e:
         print(f"Error: {e}")
