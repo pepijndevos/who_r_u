@@ -10,15 +10,16 @@ spiderrate:10
 spidermin:2
 spidermax:4
 version:2023-08-14-1
-opencaves:4,7/10,17/16,4/19,2/2,17/10,8/14,17/13,2/
+opencaves:13,3/4,7/9,7/19,2/4,19/10,17/11,12/3,16/
 camerazoom:1700.0
+levelname:Dimensional rift
 }
 tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
-38,1,1,1,12,50,38,38,38,38,38,38,38,38,38,38,1,1,1,1,38,38,38,38,50,112,101,38,38,38,38,38,38,38,38,38,38,50,38,38,50,38,
-38,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,12,1,1,12,38,38,38,38,38,34,34,38,38,38,38,38,38,38,38,38,38,112,38,38,112,38,
-38,1,38,38,38,38,38,38,38,50,38,38,50,38,38,38,50,38,38,50,38,38,38,38,38,34,34,38,38,38,50,38,38,50,38,38,38,101,38,38,101,38,
-38,1,1,1,11,11,1,1,1,12,1,1,12,38,38,38,38,38,38,38,38,38,38,38,38,111,111,34,38,38,112,101,101,112,101,101,101,101,101,101,101,38,
+38,1,1,1,12,50,38,38,38,38,38,38,38,38,38,38,26,26,26,101,38,38,38,38,50,112,101,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,1,38,38,38,38,38,38,38,38,38,38,38,38,38,38,26,26,26,38,38,38,38,38,38,34,34,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,1,38,38,38,38,38,38,38,50,38,38,50,38,38,38,1,50,38,38,38,38,38,38,38,34,34,38,38,38,50,38,38,50,38,38,38,38,38,38,50,38,
+38,1,1,1,11,11,1,1,1,12,1,1,12,38,38,38,38,50,1,12,50,38,38,38,38,111,111,34,38,38,112,101,101,112,101,101,101,101,101,101,112,38,
 38,38,38,38,34,34,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,101,101,38,38,38,38,38,38,38,38,38,38,38,101,38,38,38,
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,50,38,38,38,38,38,38,38,101,101,38,38,38,38,38,38,38,38,38,38,38,101,38,38,38,
 38,38,38,38,38,38,38,1,38,38,38,38,38,38,38,38,38,12,38,38,38,38,38,38,38,101,101,38,38,38,38,38,38,38,38,38,38,38,112,38,38,38,
@@ -111,6 +112,8 @@ ore:
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 }
 objectives{
+findminer:2
+findminer:3
 }
 buildings{
 }
@@ -119,72 +122,69 @@ landslidefrequency{
 lavaspread{
 }
 miners{
-ID=3,Translation: X=5499.452 Y=449.846 Z=52.150 Rotation: P=0.000000 Y=-40.348507 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
-ID=2,Translation: X=5193.270 Y=446.880 Z=52.150 Rotation: P=0.000000 Y=146.007080 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
-ID=0,Translation: X=1440.136 Y=6200.478 Z=91.910 Rotation: P=0.005334 Y=0.266015 R=-0.113202 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
-ID=1,Translation: X=538.294 Y=6202.014 Z=222.483 Rotation: P=-0.008401 Y=179.939301 R=-0.011364 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=0,Translation: X=1433.992 Y=6200.370 Z=91.603 Rotation: P=0.008435 Y=0.217107 R=-0.141745 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=3,Translation: X=5804.009 Y=466.050 Z=52.150 Rotation: P=0.000000 Y=3.045539 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
+ID=2,Translation: X=5881.937 Y=481.415 Z=52.150 Rotation: P=0.000000 Y=0.968767 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
+ID=1,Translation: X=540.181 Y=6173.728 Z=222.233 Rotation: P=-0.009111 Y=179.983643 R=-0.012191 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
 }
 briefing{
-
+Our scanners picked up mysterious signatures, but the miners we sent down to investigate have dropped off the radar without warning. We'll send you down with some heavy machinery to investigate. We even got you an experimental upgrade from that guy Baz. Find those missing miners, Cadet!
 }
 briefingsuccess{
-
+You found the raiders in their multidimensional malaise, good job!
 }
 briefingfailure{
-
+Those miners are nowhere to be found... Have you tried standing on two slug holes at the same time?
 }
 vehicles{
-VehicleLMLC_C,Translation: X=1209.448 Y=6199.439 Z=0.029 Rotation: P=0.005328 Y=0.266014 R=-0.000031 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
-VehicleGraniteGrinder_C,Translation: X=569.239 Y=6201.984 Z=-0.641 Rotation: P=-0.008394 Y=179.939301 R=-0.010956 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
+VehicleLMLC_C,Translation: X=1203.308 Y=6199.520 Z=0.013 Rotation: P=0.008435 Y=0.217107 R=0.013167 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
+VehicleGraniteGrinder_C,Translation: X=571.128 Y=6173.719 Z=-0.647 Rotation: P=-0.009125 Y=179.983658 R=-0.011780 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
 }
 creatures{
 }
 blocks{
-13/EventCallEvent:8,4,5.0,vehicleEnteredPortal
-11/EventCallEvent:7,17,5.0,vehicleEnteredPortal
-9/EventCallEvent:4,12,5.0,vehicleEnteredPortal
-7/EventCallEvent:4,9,5.0,vehicleEnteredPortal
-5/EventCallEvent:2,19,5.0,vehicleEnteredPortal
-3/EventCallEvent:2,16,5.0,vehicleEnteredPortal
-29/EventCallEvent:19,4,5.0,vehicleEnteredPortal
-27/EventCallEvent:19,1,5.0,vehicleEnteredPortal
-25/EventCallEvent:18,13,5.0,vehicleEnteredPortal
-23/EventCallEvent:16,2,5.0,vehicleEnteredPortal
-21/EventCallEvent:13,17,5.0,vehicleEnteredPortal
-19/EventCallEvent:13,8,5.0,vehicleEnteredPortal
-17/EventCallEvent:13,1,5.0,vehicleEnteredPortal
-15/EventCallEvent:9,13,5.0,vehicleEnteredPortal
+17/EventCallEvent:13,8,5.0,vehicleEnteredPortal
+19/EventCallEvent:13,17,5.0,vehicleEnteredPortal
+21/EventCallEvent:16,2,5.0,vehicleEnteredPortal
+23/EventCallEvent:18,13,5.0,vehicleEnteredPortal
+25/EventCallEvent:19,1,5.0,vehicleEnteredPortal
+11/EventCallEvent:8,4,5.0,vehicleEnteredPortal
+15/EventCallEvent:13,1,5.0,vehicleEnteredPortal
+27/EventCallEvent:19,4,5.0,vehicleEnteredPortal
+13/EventCallEvent:9,13,5.0,vehicleEnteredPortal
 1/EventCallEvent:1,4,5.0,vehicleEnteredPortal
-30/TriggerEnter:19,4,5.0,_,false,true
-28/TriggerEnter:19,1,5.0,_,false,true
-26/TriggerEnter:18,13,5.0,_,false,true
-24/TriggerEnter:16,2,5.0,_,false,true
-22/TriggerEnter:13,17,5.0,_,false,true
-20/TriggerEnter:13,8,5.0,_,false,true
-18/TriggerEnter:13,1,5.0,_,false,true
-16/TriggerEnter:9,13,5.0,_,false,true
-14/TriggerEnter:8,4,5.0,_,false,true
-12/TriggerEnter:7,17,5.0,_,false,true
-10/TriggerEnter:4,12,5.0,_,false,true
-8/TriggerEnter:4,9,5.0,_,false,true
-6/TriggerEnter:2,19,5.0,_,false,true
-4/TriggerEnter:2,16,5.0,_,false,true
+3/EventCallEvent:4,9,5.0,vehicleEnteredPortal
+5/EventCallEvent:4,12,5.0,vehicleEnteredPortal
+7/EventCallEvent:4,19,5.0,vehicleEnteredPortal
+9/EventCallEvent:7,17,5.0,vehicleEnteredPortal
+6/TriggerEnter:4,12,5.0,_,false,true
+8/TriggerEnter:4,19,5.0,_,false,true
+10/TriggerEnter:7,17,5.0,_,false,true
+12/TriggerEnter:8,4,5.0,_,false,true
+14/TriggerEnter:9,13,5.0,_,false,true
+16/TriggerEnter:13,1,5.0,_,false,true
+18/TriggerEnter:13,8,5.0,_,false,true
+20/TriggerEnter:13,17,5.0,_,false,true
+22/TriggerEnter:16,2,5.0,_,false,true
+24/TriggerEnter:18,13,5.0,_,false,true
+26/TriggerEnter:19,1,5.0,_,false,true
+28/TriggerEnter:19,4,5.0,_,false,true
 2/TriggerEnter:1,4,5.0,_,false,true
-30-29
-28-27
-26-25
-24-23
-22-21
-20-19
-18-17
-16-15
-14-13
-12-11
-10-9
-8-7
+4/TriggerEnter:4,9,5.0,_,false,true
 6-5
-4-3
+8-7
+10-9
+12-11
+14-13
+16-15
+18-17
+20-19
+22-21
+24-23
+26-25
+28-27
 2-1
+4-3
 }
 script{
 # Dimensional Rift - Dynamic Map Swapping System
@@ -238,6 +238,11 @@ int nextTask=0
 vehicle gg=0
 vehicle lmlc=1
 
+if(time:10)[welcome]
+
+welcome::;
+msg::"Nothing to see but slug holes, where could they be? Surely not in the slug tunnels?";
+
 # Initialize all derived variables from mapRows and mapCols
 init::;
 halfCols=mapCols//2;
@@ -274,10 +279,11 @@ copyInProgress=true;
 
 processArrayElement::;
 tempTileId=get(currentRow)(currentCol);
+validTile=true;
+((tempTileId>100))validTile=false;
 ((tempTileId>100))tempTileId-=100;
 ((leftArray==true))leftHalfTiles[arrayIndex]=tempTileId;
 ((leftArray==false))rightHalfTiles[arrayIndex]=tempTileId;
-validTile=true;
 ((tempTileId==lava))validTile=false;
 ((tempTileId==water))validTile=false;
 vehicleIndex=gg.row*halfCols;
@@ -369,6 +375,7 @@ arrayIndex=currentRow*halfCols;
 arrayIndex+=currentCol;
 ((tempTileId==lava))return;
 ((tempTileId==water))return;
+((tempTileId>100))return;
 ((read==true))[readMode][writeMode];
 
 readMode::;
@@ -470,7 +477,7 @@ xsquared=xsquared*xsquared;
 ysquared=gg.row-lmlc.row;
 ysquared=ysquared*ysquared;
 distsquared=xsquared+ysquared;
-((distsquared>2))[checkOnPortal][msg:"We don't fit through one portal!"];
+((distsquared>2))[checkOnPortal][msg:"Try a different one!"];
 
 checkOnPortal::;
 ((lastvehicle.id==gg.id))checkLmlcOnPortal;
@@ -478,14 +485,14 @@ checkOnPortal::;
 
 checkLmlcOnPortal::;
 tempTileId=get(lmlc.row)(lmlc.col);
-((tempTileId==12))[activatePortal][msg:"First vehicle on portal - bring the second!"];
+((tempTileId==12))[activatePortal][msg:"The recharge seam is buzzing, but nothing happens..."];
 
 checkGgOnPortal::;
 tempTileId=get(gg.row)(gg.col);
-((tempTileId==12))[activatePortal][msg:"First vehicle on portal - bring the second!"];
+((tempTileId==12))[activatePortal][msg:"The recharge seam is buzzing, but nothing happens..."];
 
 activatePortal::;
-msg:"Portal activated! Dimension shifting...";
+msg:"Buzzing intensifies!";
 wait:0.5;
 swapDimensions;
 
