@@ -134,6 +134,8 @@ We'll send you down with heavy machinery to get to the bottom of this. Find the 
 }
 briefingsuccess{
 Incredible! You found the miners in what appears to be a parallel dimension. This explains the teleporter interference. Mission complete.
+
+Password fragment: Y
 }
 briefingfailure{
 The lost miners weren't found and we still don't know where those formations lead. Mission failed.

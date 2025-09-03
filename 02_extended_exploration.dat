@@ -139,6 +139,8 @@ We can't afford to leave our equipment behind, and we need to get to the bottom 
 }
 briefingsuccess{
 Tool Store recovered and investigation complete. Those energy signatures are definitely not natural. Good work! Mission complete.
+
+Password fragment: I
 }
 briefingfailure{
 The Tool Store wasn't recovered and we still don't know what's causing the teleporter interference. Mission failed.

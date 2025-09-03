@@ -131,6 +131,8 @@ Find a way to extract those resources and finally discover the truth behind thes
 }
 briefingsuccess{
 Extraordinary! You've uncovered the truth - the Rock Monsters were never the real threat. The energy creatures you've discovered will change everything we know about this planet. Mission complete.
+
+Password fragment: P
 }
 briefingfailure{
 We came so close to understanding the mystery, but couldn't break through their defenses. Mission failed.

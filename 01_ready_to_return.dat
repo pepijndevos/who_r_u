@@ -134,6 +134,8 @@ We need you to go and retrieve them and find out what is going on. The miners ar
 }
 briefingsuccess{
 You managed to retrieve all the missing miners despite the transport challenges. That mysterious energy signature is still concerning though. Mission complete.
+
+Password fragment: D
 }
 briefingfailure{
 You didn't manage to retrieve all the stranded miners. We can't leave without them! Mission failed.

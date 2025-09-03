@@ -151,6 +151,8 @@ Be very careful, Cadet. This cavern appears to have lava flows that shift unpred
 }
 briefingsuccess{
 You navigated the shifting lava flows successfully! It's clear now that something is actively controlling the lava patterns. Mission complete.
+
+Password fragment: R
 }
 briefingfailure{
 The shifting lava flows proved too dangerous to navigate. We still don't understand what's controlling them. Mission failed.

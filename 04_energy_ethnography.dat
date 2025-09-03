@@ -184,6 +184,8 @@ Study their behavior patterns carefully. We need to understand what drives them 
 }
 briefingsuccess{
 Fascinating! The Rock Monsters seem to be protecting the Energy Crystals rather than simply being aggressive. When they get enough crystals, they actually retreat. That flickering rock phenomenon is also concerning. Mission complete.
+
+Password fragment: A
 }
 briefingfailure{
 We couldn't figure out the Rock Monster behavior patterns or collect enough crystals. Mission failed.

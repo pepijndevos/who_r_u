@@ -93,6 +93,8 @@ To trace the passage further we need you to establish a strong teleporter signat
 }
 briefingsuccess{
 Super Teleporter constructed successfully! The signal is much clearer now. We're getting closer to the source. Mission complete.
+
+Password fragment: M
 }
 briefingfailure{
 Without the Super Teleporter we can't penetrate deeper into the mystery. Mission failed.
