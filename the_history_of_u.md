@@ -77,7 +77,7 @@ A human expedition known as the Rock Raiders was traveling through the galaxy's 
 
 **The Misunderstood War**
 
-Stranded around Planet U with their damaged spaceship, the Rock Raiders did what they had to do to survive - they established underground bases and began mining for Energy Crystals and LEGO Ore to repair the LMS Explorer and return home. Using specialized vehicles like Hover Scouts, Granite Grinders, and Chrome Crushers, they delved deep into the planet's crystal-rich caverns.
+Stranded around Planet U with their damaged spaceship, the Rock Raiders did what they had to do to survive - they established underground bases and began mining for Energy Crystals and Ore to repair the LMS Explorer and return home. Using specialized vehicles like Hover Scouts, Granite Grinders, and Chrome Crushers, they delved deep into the planet's crystal-rich caverns.
 
 But these weren't just any crystals - they were the very essence of the U, their means of existing in physical reality. What the Rock Raiders interpreted as attacks by hostile "Rock Monsters" were actually desperate attempts by the U to protect their homeworld's crystal matrix. Each Energy Crystal harvested by the Raiders weakened Planet U's stability and threatened the U's ability to maintain physical form.
 
