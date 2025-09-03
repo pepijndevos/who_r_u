@@ -12,7 +12,7 @@ spidermax:4
 version:2023-08-14-1
 opencaves:13,3/4,7/9,7/19,2/4,19/10,17/11,12/3,16/
 camerazoom:1700.0
-levelname:Dimensional rift
+levelname:Dimensional Drift
 }
 tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
@@ -128,13 +128,15 @@ ID=2,Translation: X=5881.937 Y=481.415 Z=52.150 Rotation: P=0.000000 Y=0.968767 
 ID=1,Translation: X=540.181 Y=6173.728 Z=222.233 Rotation: P=-0.009111 Y=179.983643 R=-0.012191 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
 }
 briefing{
-Our scanners picked up mysterious signatures, but the miners we sent down to investigate have dropped off the radar without warning. We'll send you down with some heavy machinery to investigate. We even got you an experimental upgrade from that guy Baz. Find those missing miners, Cadet!
+We seem to be getting closer to the source of the mystery, but two miners we sent down to explore vanished without a trace near some unusual geological formations.
+
+We'll send you down with heavy machinery to get to the bottom of this. Find the lost miners and figure out where those strange formations lead!
 }
 briefingsuccess{
-You found the raiders in their multidimensional malaise, good job!
+Incredible! You found the miners in what appears to be a parallel dimension. This explains the teleporter interference. Mission complete.
 }
 briefingfailure{
-Those miners are nowhere to be found... Have you tried standing on two slug holes at the same time?
+The lost miners weren't found and we still don't know where those formations lead. Mission failed.
 }
 vehicles{
 VehicleLMLC_C,Translation: X=1203.308 Y=6199.520 Z=0.013 Rotation: P=0.008435 Y=0.217107 R=0.013167 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true

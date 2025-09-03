@@ -11,7 +11,7 @@ spidermin:2
 spidermax:4
 version:2023-08-14-1
 opencaves:17,15/
-levelname:Unwilling Worker
+levelname:Energy Ethnography
 }
 tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
@@ -178,13 +178,15 @@ lavaspread{
 miners{
 }
 briefing{
-Welcome Cadet, we found a cave with limited resources that are completely out of reach, we're scraping the bottom of the barrel here. See if you can collect them anyway, will you?
+Using the Super Teleporter as a relay, we've located a cavern with an almost church-like structure full of Rock Monsters. Their behavior with the Energy Crystals is peculiar - sometimes they attack, sometimes they seem to retreat.
+
+Study their behavior patterns carefully. We need to understand what drives them to attack or retreat, and collect some Energy Crystals for station upkeep if you can manage it.
 }
 briefingsuccess{
-That was smart thinking Cadet, well done!
+Fascinating! The Rock Monsters seem to be protecting the Energy Crystals rather than simply being aggressive. When they get enough crystals, they actually retreat. That flickering rock phenomenon is also concerning. Mission complete.
 }
 briefingfailure{
-They really do seem out of reach, huh? Maybe someone else can reach them...
+We couldn't figure out the Rock Monster behavior patterns or collect enough crystals. Mission failed.
 }
 vehicles{
 VehicleHoverScout_C,Translation: X=4957.501 Y=2937.760 Z=-0.001 Rotation: P=0.000444 Y=-90.003960 R=0.000086 Scale X=1.000 Y=1.000 Z=1.000,ID=1

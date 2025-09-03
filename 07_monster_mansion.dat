@@ -11,7 +11,7 @@ spidermin:2
 spidermax:4
 version:2023-08-14-1
 opencaves:19,11/
-levelname:Pyramids
+levelname:Monster Mansion
 camerazoom:2100.0
 oxygen:3600/3600
 }
@@ -125,13 +125,15 @@ lavaspread{
 miners{
 }
 briefing{
-This is it Cadet, scanners have picked up regular pyramid structures that appear to be made out of pure energy, but oddly even our best tools can't seem to brake them down. This is closer to an Indiana Jones movie than a mining operation, but maybe we'll learn more about these mysterious U aliens?
+This is it, Cadet! We've located what appears to be the headquarters of the Rock Monsters. The cavern is extremely symmetrical and rich in Energy Crystals, but the walls regenerate as soon as they're drilled.
+
+Find a way to extract those resources and finally discover the truth behind these mysterious creatures. This could be our most important mission yet!
 }
 briefingsuccess{
-
+Extraordinary! You've uncovered the truth - the Rock Monsters were never the real threat. The energy creatures you've discovered will change everything we know about this planet. Mission complete.
 }
 briefingfailure{
-
+We came so close to understanding the mystery, but couldn't break through their defenses. Mission failed.
 }
 vehicles{
 }

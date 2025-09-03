@@ -11,7 +11,7 @@ spidermin:2
 spidermax:4
 version:2023-08-14-1
 opencaves:8,13/
-levelname:Cabbage not include
+levelname:Ready to Return
 }
 tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
@@ -128,13 +128,15 @@ ID=0,Translation: X=3626.314 Y=3206.896 Z=52.150 Rotation: P=0.000000 Y=58.50557
 ID=1,Translation: X=2167.460 Y=3155.491 Z=52.150 Rotation: P=0.000000 Y=-177.480087 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobPilot/,Essential=true
 }
 briefing{
-Guess what, another teleporter accident! Bring back all the miners to the base.
+We have sufficient Energy Crystals to get back home, but for some reason we can't get a lock on the last few miners. There's some kind of mysterious energy field interfering with our teleporter systems.
+
+We need you to go and retrieve them and find out what is going on. The miners are stranded across an underground river with limited transport options available.
 }
 briefingsuccess{
-Good job! Nobody got eaten.
+You managed to retrieve all the missing miners despite the transport challenges. That mysterious energy signature is still concerning though. Mission complete.
 }
 briefingfailure{
-
+You didn't manage to retrieve all the stranded miners. We can't leave without them! Mission failed.
 }
 vehicles{
 VehicleRapidRider_C,Translation: X=4038.006 Y=3471.299 Z=-0.000 Rotation: P=0.000000 Y=-90.000694 R=-0.000244 Scale X=1.000 Y=1.000 Z=1.000,ID=1

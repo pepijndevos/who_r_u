@@ -12,7 +12,7 @@ spidermax:4
 version:2023-08-14-1
 opencaves:4,15/11,15/
 initialore:40
-levelname:A bridge too far
+levelname:Extended Exploration
 }
 tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
@@ -133,13 +133,15 @@ ID=1,Translation: X=4712.197 Y=3435.320 Z=53.150 Rotation: P=0.000000 Y=34.27321
 ID=0,Translation: X=4641.411 Y=3486.739 Z=53.150 Rotation: P=0.000000 Y=44.731709 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
 }
 briefing{
-This is a tricky one Cadet, our tool store has been lost in a landslide near a highly volatile lava lake, leaving a few rock raiders are stranded near the docks with limited equipment. We need you to find the lost tool store and mine 20 energy crystals. Be careful out there!
+We've lost a Tool Store near another one of those mysterious energy signatures. Our teleporters are still experiencing interference in that area.
+
+We can't afford to leave our equipment behind, and we need to get to the bottom of these signatures. While you recover the lost Tool Store and investigate, try to collect some Energy Crystals as well.
 }
 briefingsuccess{
-
+Tool Store recovered and investigation complete. Those energy signatures are definitely not natural. Good work! Mission complete.
 }
 briefingfailure{
-
+The Tool Store wasn't recovered and we still don't know what's causing the teleporter interference. Mission failed.
 }
 vehicles{
 }

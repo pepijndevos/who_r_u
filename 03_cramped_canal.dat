@@ -87,13 +87,15 @@ lavaspread{
 miners{
 }
 briefing{
-Hello Cadet, we've located an extremely deep, dense, and diminutive dunnel that we want you to delve, but in order to get a lock on you to get you back out you'll need to build a super teleport. Make it so.
+We traced the Rock Monster congregation down a narrow passage but then lost track of them. The interference is getting stronger the deeper we go.
+
+To trace the passage further we need you to establish a strong teleporter signature by constructing a Super Teleporter. The space is extremely limited, so careful planning will be essential.
 }
 briefingsuccess{
-
+Super Teleporter constructed successfully! The signal is much clearer now. We're getting closer to the source. Mission complete.
 }
 briefingfailure{
-
+Without the Super Teleporter we can't penetrate deeper into the mystery. Mission failed.
 }
 vehicles{
 }

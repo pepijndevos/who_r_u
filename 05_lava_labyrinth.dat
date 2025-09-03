@@ -11,7 +11,7 @@ spidermin:2
 spidermax:4
 version:2023-08-14-1
 opencaves:15,13/
-levelname:Labyrinth
+levelname:Lava Labyrinth
 }
 tiles{
 38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
@@ -145,13 +145,15 @@ ID=1,Translation: X=1671.509 Y=6714.900 Z=129.562 Rotation: P=-0.000171 Y=-33.94
 ID=0/OFFICER,Translation: X=1605.681 Y=6786.895 Z=104.746 Rotation: P=-0.003640 Y=-11.533700 R=0.414018 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
 }
 briefing{
-Cadet, we're not even sure what we're dealing with. Our scanners indicate it's a cave with lava, but we're not getting consistent readings, as if the lava moves around in impossible patterns. Anyway, if you could collect 10 energy crystals that would be great. Good luck, Cadet.
+That flickering rock you reported led us to trace the phenomenon further. We've discovered a whole cavern with bizarre lava flows! The lava keeps appearing and disappearing in different patterns.
+
+Be very careful, Cadet. This cavern appears to have lava flows that shift unpredictably. Find out what's controlling these strange patterns and collect some Energy Crystals while you're there.
 }
 briefingsuccess{
-
+You navigated the shifting lava flows successfully! It's clear now that something is actively controlling the lava patterns. Mission complete.
 }
 briefingfailure{
-
+The shifting lava flows proved too dangerous to navigate. We still don't understand what's controlling them. Mission failed.
 }
 vehicles{
 VehicleSMLC_C,Translation: X=1595.205 Y=6766.262 Z=0.384 Rotation: P=-0.000184 Y=-33.945019 R=0.000056 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1,Essential=true
