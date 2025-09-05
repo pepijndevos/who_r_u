@@ -141,8 +141,8 @@ landslidefrequency{
 lavaspread{
 }
 miners{
-ID=1,Translation: X=1671.509 Y=6714.900 Z=129.562 Rotation: P=-0.000171 Y=-33.944912 R=0.000030 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobExplosivesExpert/JobSailor/JobGeologist/JobDriver/JobEngineer/JobPilot/Level/Level/Level/Level/
-ID=0/OFFICER,Translation: X=1605.681 Y=6786.895 Z=104.746 Rotation: P=-0.003640 Y=-11.533700 R=0.414018 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
+ID=1,Translation: X=1671.530 Y=6714.929 Z=129.333 Rotation: P=0.000130 Y=-33.944988 R=0.020336 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobExplosivesExpert/JobSailor/JobGeologist/JobDriver/JobEngineer/JobPilot/Level/Level/Level/Level/
+ID=0/OFFICER,Translation: X=1605.567 Y=6786.411 Z=104.746 Rotation: P=0.007704 Y=-11.521037 R=0.018362 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/JobEngineer/JobSailor/JobPilot/JobExplosivesExpert/JobGeologist/Level/Level/Level/Level/
 }
 briefing{
 That flickering rock you reported led us to trace the phenomenon further. We've discovered a whole cavern with bizarre lava flows! The lava keeps appearing and disappearing in different patterns.
@@ -158,8 +158,8 @@ briefingfailure{
 The shifting lava flows proved too dangerous to navigate. We still don't understand what's controlling them. Mission failed.
 }
 vehicles{
-VehicleSMLC_C,Translation: X=1595.205 Y=6766.262 Z=0.384 Rotation: P=-0.000184 Y=-33.945019 R=0.000056 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1,Essential=true
-VehicleSmallTransportTruck_C,Translation: X=1609.138 Y=6785.020 Z=1.491 Rotation: P=0.000000 Y=-11.533770 R=-0.000458 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0,Essential=true
+VehicleSMLC_C,Translation: X=1595.200 Y=6766.252 Z=0.358 Rotation: P=0.000116 Y=-33.945118 R=0.020345 Scale X=1.000 Y=1.000 Z=1.000,driver=1,ID=1,Essential=true
+VehicleSmallTransportTruck_C,Translation: X=1609.137 Y=6785.018 Z=1.492 Rotation: P=0.000007 Y=-11.532397 R=0.000003 Scale X=1.000 Y=1.000 Z=1.000,driver=0,ID=0,Essential=true
 }
 creatures{
 }

@@ -21,7 +21,7 @@ tiles{
 38,38,38,38,38,38,
 38,38,46,42,38,38,
 38,38,101,34,38,38,
-38,38,106,34,38,38,
+38,38,106,34,50,38,
 38,38,42,42,38,38,
 38,38,46,46,38,38,
 38,38,46,46,38,38,
@@ -104,6 +104,9 @@ vehicles{
 creatures{
 }
 blocks{
+3/EventCallEvent:4,3,0.0,msg:"The lava appears to erode towards that seam!"
+2/TriggerChange:4,3,0.0,5
+2-3
 }
 script{
 init::;

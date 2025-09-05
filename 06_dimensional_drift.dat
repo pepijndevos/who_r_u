@@ -122,10 +122,10 @@ landslidefrequency{
 lavaspread{
 }
 miners{
-ID=0,Translation: X=1433.992 Y=6200.370 Z=91.603 Rotation: P=0.008435 Y=0.217107 R=-0.141745 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
-ID=3,Translation: X=5804.009 Y=466.050 Z=52.150 Rotation: P=0.000000 Y=3.045539 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
+ID=0,Translation: X=1433.292 Y=6200.380 Z=92.181 Rotation: P=0.008435 Y=0.216371 R=-0.039572 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=3,Translation: X=5804.009 Y=466.050 Z=52.150 Rotation: P=0.000000 Y=3.045540 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
 ID=2,Translation: X=5881.937 Y=481.415 Z=52.150 Rotation: P=0.000000 Y=0.968767 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Drill/
-ID=1,Translation: X=540.181 Y=6173.728 Z=222.233 Rotation: P=-0.009111 Y=179.983643 R=-0.012191 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
+ID=1,Translation: X=540.725 Y=6167.060 Z=222.311 Rotation: P=0.000041 Y=179.997925 R=-0.000331 Scale X=1.000 Y=1.000 Z=1.000,Drill/JobDriver/
 }
 briefing{
 We seem to be getting closer to the source of the mystery, but two miners we sent down to explore vanished without a trace near some unusual geological formations.
@@ -141,8 +141,8 @@ briefingfailure{
 The lost miners weren't found and we still don't know where those formations lead. Mission failed.
 }
 vehicles{
-VehicleLMLC_C,Translation: X=1203.308 Y=6199.520 Z=0.013 Rotation: P=0.008435 Y=0.217107 R=0.013167 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
-VehicleGraniteGrinder_C,Translation: X=571.128 Y=6173.719 Z=-0.647 Rotation: P=-0.009125 Y=179.983658 R=-0.011780 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
+VehicleLMLC_C,Translation: X=1202.609 Y=6199.503 Z=0.013 Rotation: P=0.008435 Y=0.216371 R=0.013168 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=0,ID=1,Essential=true
+VehicleGraniteGrinder_C,Translation: X=571.637 Y=6167.105 Z=-0.536 Rotation: P=0.000041 Y=179.997925 R=0.000059 Scale X=1.000 Y=1.000 Z=1.000,upgrades=UpAddNav/,driver=1,ID=0,Essential=true
 }
 creatures{
 }
@@ -489,14 +489,14 @@ checkOnPortal::;
 
 checkLmlcOnPortal::;
 tempTileId=get(lmlc.row)(lmlc.col);
-((tempTileId==12))[activatePortal][msg:"The recharge seam is buzzing, but nothing happens..."];
+((tempTileId==12))[activatePortal][msg:"The seam intensified, bring the other vehicle closer"];
 
 checkGgOnPortal::;
 tempTileId=get(gg.row)(gg.col);
-((tempTileId==12))[activatePortal][msg:"The recharge seam is buzzing, but nothing happens..."];
+((tempTileId==12))[activatePortal][msg:"The seam intensified, bring the other vehicle closer"];
 
 activatePortal::;
-msg:"Buzzing intensifies!";
+msg:"Aaaaah!";
 wait:0.5;
 swapDimensions;
 

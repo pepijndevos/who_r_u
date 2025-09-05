@@ -375,5 +375,19 @@ place:13,13,crystalseamID;
 place:14,13,crystalseamID;
 place:13,14,crystalseamID;
 place:14,14,crystalseamID;
-haswon=true
+haswon=true;
+narrative;
+
+narrative::;
+msg:"You have found our temple. We are the U. The rock monsters? No the energy crystals.";
+wait:5;
+msg:"We are energy creatures bound to the physical world by crystals.";
+wait:5;
+msg:"We manipulate matter to protect ourselves, what you call monsters are just our rock puppets";
+wait:5;
+msg:"A wormhole has brought us to your planet before which changed humanity forever, if you take us there again the consequences are unfathomable";
+wait:10;
+msg:"Choose carefully";
+wait:5;
+win;
 }
